@@ -35,15 +35,63 @@
 * Default |
 *********/
 
+.header {
+  //background-color: blue;
+  padding: 10px;
+}
+
+.header_-_logo {
+  //background-color: red;
+  display: inline-block;
+
+  img {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+  }
+}
+
+.header_-_menu {
+  //background-color: green;
+  display: inline-block;
+  line-height: 3rem;
+  padding-top: 0.1rem;
+  padding-right: 0.5rem;
+  float: right;
+}
 
 
+.header_-_menu--hamburger {
+  padding-top: 1rem;
+  line-height: 0;
+
+  // Overriding Hamburger mid bar to push right 50%
+  span::before {
+    right: -50%;
+  }
+}
 
 
 // Animation ----------------------------------------------------------------------
 
+.header_-_menu--hamburger,
+.header_-_menu--hamburger:hover {
+  // Overriding Hamburger mid bar to push right 50%
+  span::before {
+    transition: all 0.1s ease-in-out;
+  }
+}
+
 // Active ----------------------------------------------------------------------
 
 // Hover -----------------------------------------------------------------------
+
+.header_-_menu--hamburger:hover {
+  // Overriding Hamburger mid bar to push right 50%
+  span::before {
+    right: 0;
+  }
+}
 
 // Layouts ---------------------------------------------------------------------
 
