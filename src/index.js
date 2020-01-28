@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from 'app/App.component';
 
 // Assets
+import './libs/bootstrap-4.4.1/scss/bootstrap.scss';
 import './styles/index.scss';
 
 // NPM Packages
