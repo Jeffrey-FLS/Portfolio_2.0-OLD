@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
+/**
+* Example of property order and category naming convention for comment
+********************************************************************************
+* .class {
+*  //------------------------- Font & Text
+*    text-align: val;
+*    text-shadow: val;
+*  //------------------------- Color & Background
+*    background-color: val;
+*    color: val;
+*    opacity: val;
+*  //------------------------- Box
+*    height: val;
+*    width: val;
+*    border-radius: val;
+*  //------------------------- Positioning
+*    position: absolute;
+*    bottom: 0;
+*  //------------------------- List
+*    property: val;
+*  //------------------------- Table
+*    property: val;
+*  //------------------------- Miscellaneous
+*    property: val;
+*  //------------------------- Effect
+*    property: val;
+* }
+*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+// Imports ---------------------------------------------------------------------
+@import './../styles/_palette.scss';
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*******************************************************************************
+* Default |
+*********/
 
-.App-link {
-  color: #61dafb;
-}
+//body {
+//  background-color: $palette-shady-white;
+//}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+// Animation ----------------------------------------------------------------------
+
+// Active ----------------------------------------------------------------------
+
+// Hover -----------------------------------------------------------------------
+
+// Layouts ---------------------------------------------------------------------
+
+// Media Sizes -----------------------------------------------------------------
+
+
+/*******************************************************************************
+* XS |
+****/
+
+//@include mq('xs') {
+//
+//}
+
+
+/*******************************************************************************
+* SM |
+****/
+
+//@include mq('sm') {
+//
+//}
+
+
+/*******************************************************************************
+* MD |
+****/
+
+//@include mq('md') {
+//
+//}
+
+
+/*******************************************************************************
+* LG |
+****/
+
+//@include mq('lg') {
+//
+//}
+
