@@ -15,6 +15,12 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import {BurgerMenu, useOnClickOutside} from "./components/";
 
 // import { useOnClickOutside } from './hooks';
+import Slide from '@material-ui/core/Slide';
+import Fade from "@material-ui/core/Fade";
+
+// const Transition = React.forwardRef(function Transition(props, ref) {
+//     return <Slide direction="up" ref={ref} {...props} />;
+// });
 
 ////////////////////////////////////////////////////////////////////////////////
 // MATERIAL UI TABS ////////////////////////////////////////////////////////////
@@ -53,7 +59,7 @@ const Header = () => {
 
     const [open, setOpen] = useState(false);
     const node = useRef();
-    const menuId = "main-menu";
+    const navId = "main-nav";
 
     useOnClickOutside(node, () => setOpen(false));
 
@@ -77,28 +83,35 @@ const Header = () => {
                 <Link to="/home"><img src={logo} alt="logo"/></Link>
             </div>
 
-            <div className="header_-_menu">
-                <div className="header_-_menu_--_list">
-                    <StyledTabs
-                        value={value}
-                        onChange={handleChange}
-                        aria-label="styled tabs example">
+            <div className="header_-_nav">
+                <Slide direction="left" in={open} mountOnEnter unmountOnExit>
+                    <div className="header--void">
+                        <Fade in={open}>
+                    <div className="header_-_nav_--_list">
+                        <StyledTabs
+                            value={value}
+                            onChange={handleChange}
+                            aria-label="styled tabs example">
 
-                        <StyledTab label="Home" />
-                        <StyledTab label="Projects" />
-                        <StyledTab label="Blogs" />
-                        <StyledTab label="Experience" />
-                        <StyledTab label="About" />
-                        <StyledTab label="Contact" />
-                    </StyledTabs>
-                </div>
+                            <StyledTab label="Home" />
+                            <StyledTab label="Projects" />
+                            <StyledTab label="Blogs" />
+                            <StyledTab label="Experience" />
+                            <StyledTab label="About" />
+                            <StyledTab label="Contact" />
+                        </StyledTabs>
+                    </div>
+                        </Fade>
+                    </div>
 
-                <div className="header_-_menu_--_hamburger">
+                </Slide>
 
-                    <BurgerMenu open={open} setOpen={setOpen} aria-controls={menuId} />
+                <div className="header_-_nav_--_hamburger">
+
+                    <BurgerMenu open={open} setOpen={setOpen} aria-controls={navId} />
 
                 {/*<HamburgerSlider*/}
-                {/*    className="header_-_menu_--_hamburger--burger"*/}
+                {/*    className="header_-_nav_--_hamburger--burger"*/}
                 {/*    isActive={isActive}*/}
                 {/*    toggleButton={handleToggleButton}*/}
                 {/*    barColor="#fff"*/}

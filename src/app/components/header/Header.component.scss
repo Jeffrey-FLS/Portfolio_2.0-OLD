@@ -38,6 +38,7 @@
 .header {
   //background-color: blue;
   padding: 10px;
+  overflow-x: hidden;
 }
 
 .header_-_logo {
@@ -51,7 +52,7 @@
   }
 }
 
-.header_-_menu {
+.header_-_nav {
   //background-color: green;
   //display: inline-block;
   //line-height: 3rem;
@@ -62,7 +63,7 @@
   //width: 80%;
 }
 
-.header_-_menu_--_list {
+.header_-_nav_--_list {
   //background-color: blue;
   display: inline-block;
   //margin-top: 1rem;
@@ -74,18 +75,30 @@
   //margin-top: -10px !important;
 }
 
-.header_-_menu_--_hamburger {
+.header_-_nav_--_hamburger {
   height: 100%;
   position: relative;
+  background-color: #212121;
   //background-color: red;
   display: inline-block;
   padding: 8px;
   float: right;
   //margin-top: -10px;
   //margin-top: 0.5rem;
+
+  // Purpose of after pseudo selector is to cover the slide in view of the nav
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    //left: 0;
+    height: inherit;
+    width: 100%;
+    background-color: inherit;
+  }
 }
 
-.header_-_menu_--_hamburger--burger {
+.header_-_nav_--_hamburger--burger {
   //padding-top: 1rem !important;
 
   // Overriding Hamburger mid bar to push right 50%
@@ -94,11 +107,16 @@
   }
 }
 
+// Special Classes -------------------------------------------------------------
+.header--void {
+  display: inline-block;
+  //background-color: yellow;
+}
 
 // Animation ----------------------------------------------------------------------
 
-.header_-_menu_--_hamburger--burger,
-.header_-_menu_--_hamburger--burger:hover {
+.header_-_nav_--_hamburger--burger,
+.header_-_nav_--_hamburger--burger:hover {
   // Overriding Hamburger mid bar to push right 50%
   span::before {
     transition: all 0.1s ease-in-out;
@@ -109,7 +127,7 @@
 
 // Hover -----------------------------------------------------------------------
 
-.header_-_menu_--_hamburger--burger:hover {
+.header_-_nav_--_hamburger--burger:hover {
   // Overriding Hamburger mid bar to push right 50%
   span::before {
     right: 0;
