@@ -4,7 +4,7 @@ import React,{useState, useEffect, useRef} from 'react';
 // Assets
 import './Header.component.scss';
 // import {Helmet} from "react-helmet";
-import {HamburgerSlider} from 'react-animated-burgers';
+// import {HamburgerSlider} from 'react-animated-burgers';
 import logo from './../../../assets/images/logo/logo_full.png';
 import {Link} from 'react-router-dom';
 // import {Animated} from "react-animated-css";
@@ -12,10 +12,13 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
+import {BurgerMenu, useOnClickOutside} from "./components/";
 
-////////////////////////////////////////////////////////////////////////////
-// TESTING /////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
+// import { useOnClickOutside } from './hooks';
+
+////////////////////////////////////////////////////////////////////////////////
+// MATERIAL UI TABS ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 const StyledTabs = withStyles({
     indicator: {
@@ -44,9 +47,17 @@ const StyledTab = withStyles(theme => ({
     },
 }))(props => <Tab disableRipple {...props} />);
 
-// END OF TESTING --------------------------------------------------------------
+// END OF MATERIAL UI ----------------------------------------------------------
 
 const Header = () => {
+
+    const [open, setOpen] = useState(false);
+    const node = useRef();
+    const menuId = "main-menu";
+
+    useOnClickOutside(node, () => setOpen(false));
+
+    // Testing above -----------------------------------------------------------
 
     const [isActive, setIsActive] = useState(false);
     const [value, setValue] = React.useState(0);
@@ -83,13 +94,16 @@ const Header = () => {
                 </div>
 
                 <div className="header_-_menu_--_hamburger">
-                <HamburgerSlider
-                    className="header_-_menu_--_hamburger--burger"
-                    isActive={isActive}
-                    toggleButton={handleToggleButton}
-                    barColor="#fff"
-                    buttonWidth={30}
-                />
+
+                    <BurgerMenu open={open} setOpen={setOpen} aria-controls={menuId} />
+
+                {/*<HamburgerSlider*/}
+                {/*    className="header_-_menu_--_hamburger--burger"*/}
+                {/*    isActive={isActive}*/}
+                {/*    toggleButton={handleToggleButton}*/}
+                {/*    barColor="#fff"*/}
+                {/*    buttonWidth={30}*/}
+                {/*/>*/}
                 </div>
             </div>
         </header>
