@@ -52,28 +52,37 @@
 }
 
 .header_-_menu {
-  background-color: green;
+  //background-color: green;
   //display: inline-block;
   //line-height: 3rem;
   //padding-top: 0.1rem;
   //padding-right: 0.5rem;
-  padding: 0.5rem;
+  //padding: 0.5rem;
   float: right;
   //width: 80%;
 }
 
 .header_-_menu_--_list {
-  background-color: blue;
+  //background-color: blue;
   display: inline-block;
+  //margin-top: 1rem;
+  //padding-top: 1rem;
+  //padding: 0;
+  //margin: 0;
   //line-height: 0;
   //padding: 0 !important;
-  margin-top: -10px !important;
+  //margin-top: -10px !important;
 }
 
 .header_-_menu_--_hamburger {
-  background-color: red;
+  height: 100%;
+  position: relative;
+  //background-color: red;
   display: inline-block;
-  margin-top: 0.5rem;
+  padding: 8px;
+  float: right;
+  //margin-top: -10px;
+  //margin-top: 0.5rem;
 }
 
 .header_-_menu_--_hamburger--burger {

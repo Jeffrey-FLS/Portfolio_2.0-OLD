@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledBurger = styled.button`
-  position: absolute;
-  top: 5%;
-  left: 2rem;
+  position: relative;
+  //position: absolute;
+  //top: 5%;
+  //left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -18,20 +19,22 @@ export const StyledBurger = styled.button`
     width: 2rem;
     height: 0.25rem;
     // background: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryLight};
-    background: ${({ open }) => open ? '#212121' : 'white'};
+    background: white;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
-    transform-origin: 1px;
+    //transform-origin: 3%;
+    transform-origin: 97%;
+    //transform-origin: left;
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
     :nth-child(2) {
       opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      transform: ${({ open }) => open ? 'translateX(-20px)' : 'translateX(0)'};
     }
     :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
     }
   }
 `;
