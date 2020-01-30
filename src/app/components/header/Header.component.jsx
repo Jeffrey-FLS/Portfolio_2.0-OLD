@@ -1,26 +1,15 @@
 // React Components
-import React,{useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 // Assets
 import './Header.component.scss';
 // import {Helmet} from "react-helmet";
-// import {HamburgerSlider} from 'react-animated-burgers';
 import logo from './../../../assets/images/logo/logo_full.png';
 import {Link} from 'react-router-dom';
-// import {Animated} from "react-animated-css";
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-
+import {Tabs, Tab} from '@material-ui/core';
+import {withStyles} from '@material-ui/core/styles';
 import {BurgerMenu, useOnClickOutside} from "./components/";
-
-// import { useOnClickOutside } from './hooks';
-import Slide from '@material-ui/core/Slide';
-import Fade from "@material-ui/core/Fade";
-
-// const Transition = React.forwardRef(function Transition(props, ref) {
-//     return <Slide direction="up" ref={ref} {...props} />;
-// });
+import {Slide, Fade} from '@material-ui/core';
 
 ////////////////////////////////////////////////////////////////////////////////
 // MATERIAL UI TABS ////////////////////////////////////////////////////////////
@@ -37,7 +26,7 @@ const StyledTabs = withStyles({
             backgroundColor: '#635ee7',
         },
     },
-})(props => <Tabs {...props} TabIndicatorProps={{ children: <div /> }} />);
+})(props => <Tabs {...props} TabIndicatorProps={{children: <div/>}}/>);
 
 const StyledTab = withStyles(theme => ({
     root: {
@@ -87,20 +76,20 @@ const Header = () => {
                 <Slide direction="left" in={open} mountOnEnter unmountOnExit>
                     <div className="header--void">
                         <Fade in={open}>
-                    <div className="header_-_nav_--_list">
-                        <StyledTabs
-                            value={value}
-                            onChange={handleChange}
-                            aria-label="styled tabs example">
+                            <div className="header_-_nav_--_list">
+                                <StyledTabs
+                                    value={value}
+                                    onChange={handleChange}
+                                    aria-label="styled tabs example">
 
-                            <StyledTab label="Home" />
-                            <StyledTab label="Projects" />
-                            <StyledTab label="Blogs" />
-                            <StyledTab label="Experience" />
-                            <StyledTab label="About" />
-                            <StyledTab label="Contact" />
-                        </StyledTabs>
-                    </div>
+                                    <StyledTab label="Home"/>
+                                    <StyledTab label="Projects"/>
+                                    <StyledTab label="Blogs"/>
+                                    <StyledTab label="Experience"/>
+                                    <StyledTab label="About"/>
+                                    <StyledTab label="Contact"/>
+                                </StyledTabs>
+                            </div>
                         </Fade>
                     </div>
 
@@ -108,15 +97,8 @@ const Header = () => {
 
                 <div className="header_-_nav_--_hamburger">
 
-                    <BurgerMenu open={open} setOpen={setOpen} aria-controls={navId} />
-
-                {/*<HamburgerSlider*/}
-                {/*    className="header_-_nav_--_hamburger--burger"*/}
-                {/*    isActive={isActive}*/}
-                {/*    toggleButton={handleToggleButton}*/}
-                {/*    barColor="#fff"*/}
-                {/*    buttonWidth={30}*/}
-                {/*/>*/}
+                    <BurgerMenu open={open} setOpen={setOpen}
+                                aria-controls={navId}/>
                 </div>
             </div>
         </header>

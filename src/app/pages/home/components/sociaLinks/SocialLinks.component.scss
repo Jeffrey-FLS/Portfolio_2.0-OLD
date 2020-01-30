@@ -1,0 +1,152 @@
+/**
+* Example of property order and category naming convention for comment
+********************************************************************************
+* .class {
+*  //------------------------- Font & Text
+*    text-align: val;
+*    text-shadow: val;
+*  //------------------------- Color & Background
+*    background-color: val;
+*    color: val;
+*    opacity: val;
+*  //------------------------- Box
+*    height: val;
+*    width: val;
+*    border-radius: val;
+*  //------------------------- Positioning
+*    position: absolute;
+*    bottom: 0;
+*  //------------------------- List
+*    property: val;
+*  //------------------------- Table
+*    property: val;
+*  //------------------------- Miscellaneous
+*    property: val;
+*  //------------------------- Effect
+*    property: val;
+* }
+*/
+
+// Imports ---------------------------------------------------------------------
+//@import './../../../styles/_palette.scss';
+
+
+/*******************************************************************************
+* Default |
+*********/
+
+//body {
+//  background-color: $palette-shady-white;
+//}
+
+
+.social-links {
+  color: white;
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 35%;
+  //display: inline-block;
+  //text-align: center;
+  //padding: 10px;
+  width: 50px;
+}
+
+.social-links_-_links {
+ background-color: gray;
+  display: block;
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social-links_-_links--link {
+  font-size: 1.5rem;
+  display: block;
+  margin: 15px 0;
+  //padding: 15px 0;
+  //text-align: center !important;
+}
+
+
+.social-links_-_title {
+  //background-color: red;
+  position: absolute;
+  bottom: 13%;
+  right: 0;
+  left: 0;
+  padding-top: 8px;
+  //line-height: 0;
+  //width: 100%;
+  //padding: 0;
+  //margin: 0;
+  //display: block;
+  transform: rotate(-90deg);
+  //margin-bottom: -100px;
+  //position: absolute;
+  //bottom: 0;
+
+  h6 {
+    white-space: nowrap;
+    //padding: 0;
+    //margin: 0;
+    //text-align: left;
+    //width: 100%;
+    //display: block;
+    //line-height: 1rem;
+    //font-size: 3rem;
+  }
+}
+
+
+
+
+
+// Animation ----------------------------------------------------------------------
+
+// Active ----------------------------------------------------------------------
+
+// Hover -----------------------------------------------------------------------
+
+// Layouts ---------------------------------------------------------------------
+
+// Media Sizes -----------------------------------------------------------------
+
+
+/*******************************************************************************
+* XS |
+****/
+
+//@include mq('xs') {
+//
+//}
+
+
+/*******************************************************************************
+* SM |
+****/
+
+//@include mq('sm') {
+//
+//}
+
+
+/*******************************************************************************
+* MD |
+****/
+
+//@include mq('md') {
+//
+//}
+
+
+/*******************************************************************************
+* LG |
+****/
+
+//@include mq('lg') {
+//
+//}
+
