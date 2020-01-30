@@ -35,25 +35,24 @@
 * Default |
 *********/
 
-//body {
-//  background-color: $palette-shady-white;
-//}
+// Global Variables ------------------------------------------------------------
 
 
-.social-links {
+
+.social {
   color: white;
   background-color: blue;
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 35%;
+  height: 50%;
   //display: inline-block;
   //text-align: center;
   //padding: 10px;
   width: 50px;
 }
 
-.social-links_-_links {
+.social_-_links {
  background-color: gray;
   display: block;
   position: absolute;
@@ -62,19 +61,43 @@
   transform: translateX(-50%);
 }
 
-.social-links_-_links--link {
+.social_-_links_--_link {
   font-size: 1.5rem;
-  display: block;
-  margin: 15px 0;
+  //display: block;
+  margin: 5px 0;
   //padding: 15px 0;
   //text-align: center !important;
+  display: inline-block;
+  position: relative;
+  background-color: red;
+  padding: 5px;
+  cursor: pointer;
+
+  &::after {
+    content:'';
+    position: absolute;
+    border: 2px solid white;
+    height: 2.5rem;
+    width: 2.5rem;
+    left: -3px;
+    bottom: 2px;
+    border-radius: 25px;
+    transform: scale(0);
+  }
 }
 
+.social_-_links_--_link h6 {
+  display: inline-block;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  opacity: 0;
+}
 
-.social-links_-_title {
+.social_-_title {
   //background-color: red;
   position: absolute;
-  bottom: 13%;
+  bottom: 10%;
   right: 0;
   left: 0;
   padding-top: 8px;
@@ -106,9 +129,37 @@
 
 // Animation ----------------------------------------------------------------------
 
+.social_-_links_--_link,
+.social_-_links_--_link:hover {
+  h6 {
+    transition-property: opacity, left;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  &::after{
+    //transition-property: opacity, left, transform;
+    //transition-duration: 300ms;
+    //transition-timing-function: ease-in-out;
+    transition: transform 300ms ease-in-out;
+  }
+}
+
 // Active ----------------------------------------------------------------------
 
 // Hover -----------------------------------------------------------------------
+
+.social_-_links_--_link:hover {
+  h6 {
+    left: 50px;
+    opacity: 1;
+  }
+
+  &::after {
+    transform: scale(1);
+  }
+}
+
 
 // Layouts ---------------------------------------------------------------------
 
