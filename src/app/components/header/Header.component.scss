@@ -52,18 +52,32 @@
 }
 
 .header_-_menu {
-  //background-color: green;
-  display: inline-block;
-  line-height: 3rem;
-  padding-top: 0.1rem;
-  padding-right: 0.5rem;
+  background-color: green;
+  //display: inline-block;
+  //line-height: 3rem;
+  //padding-top: 0.1rem;
+  //padding-right: 0.5rem;
+  padding: 0.5rem;
   float: right;
+  //width: 80%;
 }
 
+.header_-_menu_--_list {
+  background-color: blue;
+  display: inline-block;
+  //line-height: 0;
+  //padding: 0 !important;
+  margin-top: -10px !important;
+}
 
-.header_-_menu--hamburger {
-  padding-top: 1rem;
-  line-height: 0;
+.header_-_menu_--_hamburger {
+  background-color: red;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.header_-_menu_--_hamburger--burger {
+  //padding-top: 1rem !important;
 
   // Overriding Hamburger mid bar to push right 50%
   span::before {
@@ -74,8 +88,8 @@
 
 // Animation ----------------------------------------------------------------------
 
-.header_-_menu--hamburger,
-.header_-_menu--hamburger:hover {
+.header_-_menu_--_hamburger--burger,
+.header_-_menu_--_hamburger--burger:hover {
   // Overriding Hamburger mid bar to push right 50%
   span::before {
     transition: all 0.1s ease-in-out;
@@ -86,7 +100,7 @@
 
 // Hover -----------------------------------------------------------------------
 
-.header_-_menu--hamburger:hover {
+.header_-_menu_--_hamburger--burger:hover {
   // Overriding Hamburger mid bar to push right 50%
   span::before {
     right: 0;
