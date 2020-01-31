@@ -17,23 +17,31 @@ const SocialLinks = () => {
         <div className="social">
             <div className="social_-_links">
                 <div className="social_-_links_--_link">
-                    <FaLinkedinIn className="social_-_links_--_link--icon"/>
-                    <h6>LinkedIn</h6>
+                    <a href="#">
+                        <FaLinkedinIn className="social_-_links_--_link--icon"/>
+                        <h6>LinkedIn</h6>
+                    </a>
                 </div>
 
                 <div className="social_-_links_--_link">
-                    <FaCodepen className="social_-_links_--_link--icon"/>
-                    <h6>Codepen</h6>
+                    <a href="#">
+                        <FaCodepen className="social_-_links_--_link--icon"/>
+                        <h6>Codepen</h6>
+                    </a>
                 </div>
 
                 <div className="social_-_links_--_link">
-                    <FaGithubAlt className="social_-_links_--_link--icon"/>
-                    <h6>Github</h6>
+                    <a href="#">
+                        <FaGithubAlt className="social_-_links_--_link--icon"/>
+                        <h6>Github</h6>
+                    </a>
                 </div>
 
                 <div className="social_-_links_--_link">
-                    <FaFacebookF className="social_-_links_--_link--icon"/>
-                    <h6>Facebook</h6>
+                    <a href="#">
+                        <FaFacebookF className="social_-_links_--_link--icon"/>
+                        <h6>Facebook</h6>
+                    </a>
                 </div>
             </div>
 

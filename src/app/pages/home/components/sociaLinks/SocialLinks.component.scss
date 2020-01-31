@@ -35,17 +35,13 @@
 * Default |
 *********/
 
-// Global Variables ------------------------------------------------------------
-
-
-
 .social {
   color: white;
-  background-color: blue;
+  //background-color: blue;
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 50%;
+  height: 40%;
   //display: inline-block;
   //text-align: center;
   //padding: 10px;
@@ -53,7 +49,7 @@
 }
 
 .social_-_links {
- background-color: gray;
+ //background-color: gray;
   display: block;
   position: absolute;
   top: 1%;
@@ -69,7 +65,7 @@
   //text-align: center !important;
   display: inline-block;
   position: relative;
-  background-color: red;
+  //background-color: red;
   padding: 5px;
   cursor: pointer;
 
@@ -129,11 +125,13 @@
 
 // Animation ----------------------------------------------------------------------
 
+$transitionDuration: 250ms; // Local Varible
+
 .social_-_links_--_link,
 .social_-_links_--_link:hover {
   h6 {
     transition-property: opacity, left;
-    transition-duration: 300ms;
+    transition-duration: $transitionDuration;
     transition-timing-function: ease-in-out;
   }
 
@@ -141,7 +139,7 @@
     //transition-property: opacity, left, transform;
     //transition-duration: 300ms;
     //transition-timing-function: ease-in-out;
-    transition: transform 300ms ease-in-out;
+    transition: transform $transitionDuration ease-in-out;
   }
 }
 
