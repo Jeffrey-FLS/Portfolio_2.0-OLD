@@ -1,0 +1,224 @@
+/**
+* Example of property order and category naming convention for comment
+********************************************************************************
+* .class {
+*  //------------------------- Font & Text
+*    text-align: val;
+*    text-shadow: val;
+*  //------------------------- Color & Background
+*    background-color: val;
+*    color: val;
+*    opacity: val;
+*  //------------------------- Box
+*    height: val;
+*    width: val;
+*    border-radius: val;
+*  //------------------------- Positioning
+*    position: absolute;
+*    bottom: 0;
+*  //------------------------- List
+*    property: val;
+*  //------------------------- Table
+*    property: val;
+*  //------------------------- Miscellaneous
+*    property: val;
+*  //------------------------- Effect
+*    property: val;
+* }
+*/
+
+// Imports ---------------------------------------------------------------------
+//@import './../../../styles/_palette.scss';
+
+
+/*******************************************************************************
+* Default |
+*********/
+
+//body {
+//  background-color: $palette-shady-white;
+//}
+
+//.circle-menu {
+//  position: absolute;
+//  top: 50%;
+//  left: 50%;
+//  transform: translate(-50% -50%);
+//  background-color: blue;
+//}
+
+//.circle {
+//  margin: 25% auto;
+//  width: 60%;
+//  height: 50vh;
+//  background-color: blue;
+//  position: relative;
+//  text-align: center;
+//}
+
+.circle {
+  padding: 15px;
+  //margin: 25% auto;
+  width: 50%;
+  height: 33vh;
+  background-color: blue;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+
+$height: 140px;
+$width: $height + 20px;
+
+.circle-side {
+  height: $height;
+  width: $width;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(yellow, 0.5);
+  // margin: 0 auto;
+  transition: all 1s ease-in-out;
+   display: inline-block;
+  // margin: 25%;
+
+  &::before {
+    height: $height;
+    width: $height;
+    position: absolute;
+    content: "";
+    border-top-right-radius: 100%;
+    // border: 5px solid crimson;
+    border-top: 5px solid crimson;
+    border-right: 5px solid crimson;
+    background-color: transparent;
+    top: 25px;
+    left: 8px;
+    transform: rotate(18deg);
+  }
+}
+
+
+//img {
+//  position: absolute;
+//  margin: 0 auto;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  transform: rotate(185deg);
+//  height: auto;
+//  width: 300px;
+//  z-index: -1;
+//}
+
+.side-1 {
+  bottom: 35px;
+  left: 110px;
+  // top: -35px;
+  // left: -8px;
+  transform: rotate(-57deg);
+}
+
+.side-2 {
+  bottom: 106px;
+  left: 231px;
+  // left: -8px;
+  transform: rotate(15deg);
+}
+
+.side-3 {
+  bottom: 115px;
+  left: 204px;
+  // left: -8px;
+  transform: rotate(87deg);
+}
+
+.side-4 {
+  bottom: 238px;
+  left: 68px;
+  // left: -8px;
+  transform: rotate(158deg);
+}
+
+.side-5 {
+  bottom: 503px;
+  left: 10px;
+  // left: -8px;
+  transform: rotate(230deg);
+}
+
+.side-1:hover {
+  // margin-top: -100px;
+  // transform: scale(1);
+  height: $height + 30px;
+  width: $height + 30px;
+  bottom: 100px;
+  // left: inherit;
+  // bottom: inherit;
+}
+
+.side-2:hover {
+  // margin-top: -100px;
+  // transform: scale(1);
+  // height: $height + 30px;
+  // width: $height + 30px;
+  left: 400px;
+  bottom: 200px;
+  height: $height + 30px;
+  width: $height + 30px;
+  // left: inherit;
+  // bottom: inherit;
+}
+
+
+
+
+
+
+
+// Animation ----------------------------------------------------------------------
+
+// Active ----------------------------------------------------------------------
+
+// Hover -----------------------------------------------------------------------
+
+// Layouts ---------------------------------------------------------------------
+
+// Media Sizes -----------------------------------------------------------------
+
+
+/*******************************************************************************
+* XS |
+****/
+
+//@include mq('xs') {
+//
+//}
+
+
+/*******************************************************************************
+* SM |
+****/
+
+//@include mq('sm') {
+//
+//}
+
+
+/*******************************************************************************
+* MD |
+****/
+
+//@include mq('md') {
+//
+//}
+
+
+/*******************************************************************************
+* LG |
+****/
+
+//@include mq('lg') {
+//
+//}
+

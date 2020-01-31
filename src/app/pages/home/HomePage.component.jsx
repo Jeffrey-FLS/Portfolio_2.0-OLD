@@ -5,19 +5,24 @@ import React from 'react';
 import './HomePage.component.scss';
 
 import {Helmet} from 'react-helmet';
-import {SocialLinks} from './components/';
+import {SocialLinks, CircleMenu} from './components';
 // import Header from "../../components/header/Header.component";
 
 const HomePage = () => {
     return (
-        <main>
+        <div className="home">
             <Helmet>
                 <style>{'body { background-color: #212121; }'}</style>
             </Helmet>
-            <h1>Hello From HomePage</h1>
 
-            <SocialLinks/>
-        </main>
+            <div className="home_-_circle-menu">
+                <CircleMenu/>
+            </div>
+
+            <div className="home_-_social-links">
+                <SocialLinks/>
+            </div>
+        </div>
     );
 };
 
