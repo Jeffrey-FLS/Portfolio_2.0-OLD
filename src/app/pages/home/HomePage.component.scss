@@ -40,24 +40,34 @@
 //}
 
 .home {
-  background-color: red;
-  height: 100vh;
-  width: 100%;
-  position: relative;
+  //background-color: red;
   //height: auto;
   //width: 100%;
+  //position: fixed;
+  //height: 90%;
+  //width: 100%;
   //position: relative;
+  //width: 100vw;
+  //height: calc(100vw * (9/16));
+  //height: calc(100vh - 3rem);
+  //width: 100vw;
 }
 
 .home_-_circle-menu {
-  background-color: green;
+  //background-color: green;
+  margin-top: 8%;
   //height: auto;
   //width: 100%;
   //display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% -50%);
+  //position: absolute;
+  //top: 50%;
+  //transform: translateY(-50%);
+  //margin: 0 auto;
+  //$position: 10%;
+  //$neg-position: -$position;
+  //top: $position;
+  //left: $position;
+  //transform: translate($neg-position $neg-position);
   //right: 0;
   //margin: 0 auto;
   //width: inherit;

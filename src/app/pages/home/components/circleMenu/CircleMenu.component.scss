@@ -57,14 +57,19 @@
 //}
 
 .circle {
+  //$circle-dimension: 430px;
+
   padding: 15px;
+  padding-top: 25px;
   //margin: 25% auto;
-  width: 50%;
-  height: 33vh;
-  background-color: blue;
+  //width: 100%;
+  width: 430px;
+  height: 43vh;
+  //background-color: blue;
   position: relative;
-  text-align: center;
-  display: inline-block;
+  //text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -76,10 +81,10 @@ $width: $height + 20px;
   width: $width;
   overflow: hidden;
   position: relative;
-  background-color: rgba(yellow, 0.5);
+  //background-color: rgba(yellow, 0.5);
   // margin: 0 auto;
   transition: all 1s ease-in-out;
-   display: inline-block;
+   //display: inline-block;
   // margin: 25%;
 
   &::before {
@@ -89,14 +94,45 @@ $width: $height + 20px;
     content: "";
     border-top-right-radius: 100%;
     // border: 5px solid crimson;
-    border-top: 5px solid crimson;
-    border-right: 5px solid crimson;
+    //border-top: 5px solid crimson;
+    //border-right: 5px solid crimson;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
     background-color: transparent;
+    //top: 25px;
+    //left: 8px;
     top: 25px;
-    left: 8px;
+    left: 14px;
     transform: rotate(18deg);
   }
 }
+
+.circle-center {
+  $inner-circle-dimension: 275px;
+  //$inner-circle-position: 40%;
+
+
+  //background-color: red;
+  background-color: #212121;
+  height: $inner-circle-dimension;
+  width: $inner-circle-dimension;
+  border-radius: 300px;
+  //top: 10.5%;
+  //left: 19.5%;
+  top:38px;
+  left:82px;
+  //opacity: 0.5;
+  display: inline;
+  position: absolute;
+  //margin: 0 auto;
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50% -50%);
+  //z-index: 2000;
+  //padding: 0;
+  //margin: 0;
+}
+
 
 
 //img {
@@ -123,28 +159,32 @@ $width: $height + 20px;
   bottom: 106px;
   left: 231px;
   // left: -8px;
-  transform: rotate(15deg);
+  transform: rotate(15.5deg);
 }
 
 .side-3 {
-  bottom: 115px;
+  //background-color: green;
+  //bottom: 115px;
+  bottom: 114px;
   left: 204px;
   // left: -8px;
   transform: rotate(87deg);
 }
 
 .side-4 {
+  //background-color: green;
   bottom: 238px;
   left: 68px;
   // left: -8px;
-  transform: rotate(158deg);
+  transform: rotate(159deg);
 }
 
 .side-5 {
+  //background-color: green;
   bottom: 503px;
   left: 10px;
   // left: -8px;
-  transform: rotate(230deg);
+  transform: rotate(231deg);
 }
 
 .side-1:hover {
