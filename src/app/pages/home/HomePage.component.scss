@@ -35,10 +35,6 @@
 * Default |
 *********/
 
-//body {
-//  background-color: $palette-shady-white;
-//}
-
 .home-base{
   background-color: green;
   position: fixed;
@@ -54,7 +50,7 @@
 }
 
 .home {
-  background-color: red;
+  background-color: gray;
   //position: relative;
   //width: fit-content;
   /* To adjust the height as well */
@@ -68,7 +64,7 @@
   //position: fixed;
   //width: 100%;
   //background-size: cover;
-  position: absolute;
+  //position: absolute;
   //min-height: 90vh;
   //height: auto;
   width: 100%;
@@ -79,6 +75,13 @@
   //height: calc(100vw * (9/16));
   //height: calc(100vh - 3rem);
   //width: 100vw;
+}
+
+.home_-_intro-about {
+  background-color: green;
+  height: 500px;
+  width: 100px;
+  padding-top: 5rem;
 }
 
 .home_-_circle-menu {
