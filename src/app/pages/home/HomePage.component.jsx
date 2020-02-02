@@ -10,19 +10,22 @@ import {SocialLinks, CircleMenu} from './components';
 
 const HomePage = () => {
     return (
-        <div className="home">
-            <Helmet>
-                <style>{'body { background-color: #212121; }'}</style>
-            </Helmet>
+        // <div className="home-base">
+            <div className="home">
 
-            <div className="home_-_circle-menu">
-                <CircleMenu/>
-            </div>
+            {/*<Helmet>*/}
+            {/*    <style>{'body { background-color: #212121; }'}</style>*/}
+            {/*</Helmet>*/}
 
-            <div className="home_-_social-links">
-                <SocialLinks/>
+            {/*<div className="home_-_circle-menu">*/}
+            {/*    <CircleMenu/>*/}
+            {/*</div>*/}
+
+            {/*<div className="home_-_social-links">*/}
+            {/*    <SocialLinks/>*/}
+            {/*</div>*/}
             </div>
-        </div>
+         // </div>
     );
 };
 

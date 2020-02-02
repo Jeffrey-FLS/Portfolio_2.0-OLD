@@ -68,39 +68,39 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="header_-_logo">
-                <Link to="/home"><img src={logo} alt="logo"/></Link>
-            </div>
+            {/*<div className="header_-_logo">*/}
+            {/*    <Link to="/home"><img src={logo} alt="logo"/></Link>*/}
+            {/*</div>*/}
 
-            <div className="header_-_nav">
-                <Slide direction="left" in={open} mountOnEnter unmountOnExit>
-                    <div className="header--void">
-                        <Fade in={open}>
-                            <div className="header_-_nav_--_list">
-                                <StyledTabs
-                                    value={value}
-                                    onChange={handleChange}
-                                    aria-label="styled tabs example">
+            {/*<div className="header_-_nav">*/}
+            {/*    <Slide direction="left" in={open} mountOnEnter unmountOnExit>*/}
+            {/*        <div className="header--void">*/}
+            {/*            <Fade in={open}>*/}
+            {/*                <div className="header_-_nav_--_list">*/}
+            {/*                    <StyledTabs*/}
+            {/*                        value={value}*/}
+            {/*                        onChange={handleChange}*/}
+            {/*                        aria-label="styled tabs example">*/}
 
-                                    <StyledTab label="Home"/>
-                                    <StyledTab label="Projects"/>
-                                    <StyledTab label="Blogs"/>
-                                    <StyledTab label="Experience"/>
-                                    <StyledTab label="About"/>
-                                    <StyledTab label="Contact"/>
-                                </StyledTabs>
-                            </div>
-                        </Fade>
-                    </div>
+            {/*                        <StyledTab label="Home"/>*/}
+            {/*                        <StyledTab label="Projects"/>*/}
+            {/*                        <StyledTab label="Blogs"/>*/}
+            {/*                        <StyledTab label="Experience"/>*/}
+            {/*                        <StyledTab label="About"/>*/}
+            {/*                        <StyledTab label="Contact"/>*/}
+            {/*                    </StyledTabs>*/}
+            {/*                </div>*/}
+            {/*            </Fade>*/}
+            {/*        </div>*/}
 
-                </Slide>
+            {/*    </Slide>*/}
 
-                <div className="header_-_nav_--_hamburger">
+            {/*    <div className="header_-_nav_--_hamburger">*/}
 
-                    <BurgerMenu open={open} setOpen={setOpen}
-                                aria-controls={navId}/>
-                </div>
-            </div>
+            {/*        <BurgerMenu open={open} setOpen={setOpen}*/}
+            {/*                    aria-controls={navId}/>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
         </header>
     );
 };
