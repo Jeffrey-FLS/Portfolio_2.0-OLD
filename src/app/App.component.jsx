@@ -7,6 +7,7 @@ import './App.component.scss';
 
 // App Components
 import {
+    Footer,
     Header
 } from "./components";
 
@@ -23,6 +24,13 @@ function App() {
           {/*<Route path="/userMain" render={(routerProps) => <UserMenuPage quizzes={this.state.quizzes} {...routerProps}/>}/>*/}
           <Route path="/" component={HomePage}/>
         </Switch>
+
+
+          <div className="app_-_footer container">
+              <div className="row">
+                <Footer/>
+              </div>
+          </div>
       </div>
   );
 }

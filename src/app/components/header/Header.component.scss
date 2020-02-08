@@ -107,14 +107,13 @@
   }
 }
 
-.header_-_nav_--_hamburger--burger {
-  //padding-top: 1rem !important;
-
-  // Overriding Hamburger mid bar to push right 50%
-  span::before {
+// Overriding Hamburger mid bar to push right 50%
+.header_-_nav_--_hamburger button {
+  span:nth-child(2) {
     right: -50%;
   }
 }
+
 
 // Special Classes -------------------------------------------------------------
 .header--void {
@@ -124,10 +123,10 @@
 
 // Animation ----------------------------------------------------------------------
 
-.header_-_nav_--_hamburger--burger,
-.header_-_nav_--_hamburger--burger:hover {
-  // Overriding Hamburger mid bar to push right 50%
-  span::before {
+// Overriding Hamburger mid bar to push right 50%
+.header_-_nav_--_hamburger,
+.header_-_nav_--_hamburger:hover {
+  span:nth-child(2) {
     transition: all 0.1s ease-in-out;
   }
 }
@@ -136,9 +135,9 @@
 
 // Hover -----------------------------------------------------------------------
 
-.header_-_nav_--_hamburger--burger:hover {
-  // Overriding Hamburger mid bar to push right 50%
-  span::before {
+// Overriding Hamburger mid bar to push right 50%
+.header_-_nav_--_hamburger:hover {
+  span:nth-child(2) {
     right: 0;
   }
 }

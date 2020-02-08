@@ -36,7 +36,7 @@
 *********/
 
 .home-base{
-  background-color: green;
+  //background-color: green;
   position: fixed;
   width: 100%;
   height: 90%;
@@ -50,7 +50,7 @@
 }
 
 .home {
-  background-color: gray;
+  //background-color: gray;
   //position: relative;
   //width: fit-content;
   /* To adjust the height as well */
@@ -78,10 +78,11 @@
 }
 
 .home_-_intro-about {
-  background-color: green;
-  height: 500px;
+  //background-color: green;
+  height: 230px;
   width: 100px;
   padding-top: 5rem;
+  color: white;
 }
 
 .home_-_circle-menu {
@@ -107,11 +108,61 @@
   //transform: translate(-25% -25%);
 }
 
+.home_-_scroll {
+  //background-color: blue;
+  height: 30px;
+  //width: ;
+  margin: 20px 0;
+}
+
+.home_-_scroll_--_bar {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 30%;
+    background-color: $palette-shady-white;
+    border-radius: 5px;
+    top: 50%;
+  }
+
+  &::before {
+    left: 10%;
+  }
+
+  &::after {
+    right: 10%;
+  }
+}
+
+.home_-_scroll_--_bar-mouse {
+  //background-color: $palette-shady-white;
+  height: 30px;
+  width: 18px;
+  margin: 0 auto;
+  border: 2px solid $palette-shady-white;
+  border-radius: 8px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 2px;
+    border-radius: 1px;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: $palette-shady-white;
+  }
+}
 
 
 
 
-// Animation ----------------------------------------------------------------------
+
+// Animation -------------------------------------------------------------------
 
 // Active ----------------------------------------------------------------------
 
