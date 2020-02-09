@@ -6,7 +6,9 @@ import './AboutSection.component.scss';
 
 const AboutSection = () => {
     return (
-        <h1>Hello From AboutSection</h1>
+        <div className="about">
+            <h1>Hello From AboutSection</h1>
+        </div>
     );
 };
 

@@ -1,8 +1,14 @@
 
-import Header from "./header/Header.component";
-import Footer from "./footer/Footer.component";
+import AboutSection from "./about/AboutSection.component";
+import BlogSection from "./blogs/BlogSection.component";
+import ContactSection from "./contact/ContactSection.component";
+import ExperienceSection from "./experience/ExperienceSection.component";
+import ProjectSection from "./projects/ProjectSection.component";
 
 export {
-    Header,
-    Footer
+    AboutSection,
+    BlogSection,
+    ContactSection,
+    ExperienceSection,
+    ProjectSection
 }
