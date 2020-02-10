@@ -39,6 +39,24 @@
 //  background-color: $palette-shady-white;
 //}
 
+.App {
+  display: block;
+  position: relative;
+  //padding: 15px;
+
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  background-color: red;
+  //  height: 100%;
+  //  width: 100%;
+  //  margin: 5px;
+  //  //margin: 15px;
+  //  display: inline-block;
+  //  //z-index: 10;
+  //}
+}
+
 .app_-_main {
   display: block;
 }
@@ -46,7 +64,7 @@
 .app_-_main_--_section {
   margin: 150px 0;
   background-color: blue;
-  height: 100px;
+  height: 500px;
   width: inherit;
   //padding: 150px 0;
 }
