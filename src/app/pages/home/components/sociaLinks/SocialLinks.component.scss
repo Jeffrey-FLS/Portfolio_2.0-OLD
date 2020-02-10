@@ -37,7 +37,8 @@
 
 .social {
   color: white;
-  background-color: pink;
+  //background-color: pink;
+  position: relative;
   display: block;
   //position: absolute;
   //bottom: 0;
@@ -51,7 +52,7 @@
 
 .social_-_links {
  //background-color: gray;
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 1%;
   left: 50%;
@@ -93,11 +94,15 @@
 
 .social_-_title {
   //background-color: red;
+  display: inline-block;
   position: absolute;
-  bottom: 10%;
+  bottom: 0;
   right: 0;
-  left: 0;
-  padding-top: 8px;
+  left: -10px;
+  margin: 0 auto;
+  width: inherit;
+//margin-top: -5px;
+//  padding-top: 8px;
   //line-height: 0;
   //width: 100%;
   //padding: 0;
