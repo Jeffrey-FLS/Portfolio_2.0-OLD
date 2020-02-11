@@ -32,7 +32,47 @@
 
 .project {
   color: red;
+  background-color: green;
+  height: inherit;
+  width: inherit;
+  display: block;
+  position: relative;
 }
+
+.project_-_description {
+  background-color: black;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+
+
+
+  //&::after {
+  //  content: '';
+  //  position: absolute;
+  //  height: 5px;
+  //  width: 100%;
+  //  background-color: yellow;
+  //}
+}
+
+.project_-_description h4 {
+  background-color: blue;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: yellow;
+    bottom: 0;
+    left: 0;
+  }
+}
+
 
 
 /*******************************************************************************

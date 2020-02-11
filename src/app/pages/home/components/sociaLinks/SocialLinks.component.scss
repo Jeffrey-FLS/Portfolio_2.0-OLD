@@ -43,20 +43,26 @@
   //position: absolute;
   //bottom: 0;
   //left: 26px;
-  height: 300px;
+  height: 310px;
   //display: inline-block;
   //text-align: center;
   //padding: 10px;
-  width: 100px;
+  width: 50px;
+  //padding: 0;
+  //margin: 0;
 }
 
 .social_-_links {
  //background-color: gray;
   display: inline-block;
   position: absolute;
-  top: 1%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
+  //padding: 0;
+  //margin: 0;
+  //margin-top: 0;
+  //padding-top: 0;
 }
 
 .social_-_links_--_link {
@@ -98,11 +104,11 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  left: -10px;
+  //left: -10px;
   margin: 0 auto;
   width: inherit;
 //margin-top: -5px;
-//  padding-top: 8px;
+  padding-top: 8px;
   //line-height: 0;
   //width: 100%;
   //padding: 0;
