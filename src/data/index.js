@@ -1,10 +1,12 @@
 
-import socialLinks from "./socialLinks";
-import projects from "./projects";
+import socialLinks from "./sections/socialLinks";
+import projects from "./sections/projects";
+import skills from "./sections/skills";
 
 const data = {
     socialLinks,
-    projects
+    projects,
+    skills
 };
 
 export default data;

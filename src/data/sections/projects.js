@@ -10,21 +10,26 @@ const projects = [
             "Typescript",
             "Javascript",
             "HTML",
-            "Bash",
+            // "Bash",
             "SCSS"
         ],
         technologies: [
             "Angular 7",
-            "Google Chrome Extension API",
+            "Chrome Extension API",
             "Angular Material",
             "RxJS"
         ],
         tools: [
-            "Google Chrome Developer Tools",
+            "Chrome Developer Tools",
             "Zeplin",
             "Photoshop",
-            "Webstorm",
-            "Ubuntu"
+            "Webstorm"
+            // "Ubuntu"
+        ],
+        images: [
+          "tabpikOne",
+          "tabpikTwo",
+          "tabpikThree"
         ],
         link: "#"
     }

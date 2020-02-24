@@ -30,8 +30,13 @@
 // Imports ---------------------------------------------------------------------
 @import './../../../styles/_palette.scss';
 
+
+/*******************************************************************************
+* Default |
+*********/
+
 .project {
-  color: red;
+  color: white;
   background-color: green;
   height: inherit;
   width: inherit;
@@ -44,6 +49,7 @@
 .project_-_technologies,
 .project_-_tools {
   position: absolute;
+  width: 40%;
 
   h4 {
     position: relative;
@@ -66,66 +72,80 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
-
-
-
-  //&::after {
-  //  content: '';
-  //  position: absolute;
-  //  height: 5px;
-  //  width: 100%;
-  //  background-color: yellow;
-  //}
+  //width: 30%;
 }
 
-.project_-_description h4 {
-  background-color: blue;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: yellow;
-    bottom: 0;
-    left: 0;
-  }
-}
+//.project_-_description h4 {
+//  background-color: blue;
+//  position: relative;
+//
+//  &::after {
+//    content: '';
+//    position: absolute;
+//    height: 2px;
+//    width: 100%;
+//    background-color: yellow;
+//    bottom: 0;
+//    left: 0;
+//  }
+//}
 
 .project_-_languages {
   background-color: red;
-  position: absolute;
   top: 0;
   right: 0;
+  text-align: right;
+  color: white;
+
+  //h6:nth-child(3) {
+  //  position: relative;
+  //  right:0;
+  //}
 }
 
 .project_-_technologies {
   background-color: orange;
-  bottom: 100px;
+  bottom: 0;
   left: 0;
 }
 
 .project_-_tools {
   background-color: gray;
-  bottom: 100px;
+  bottom: 0;
   right: 0;
+  text-align: right;
 }
 
-
-
-/*******************************************************************************
-* Default |
-*********/
-
-//body {
-//  background-color: $palette-shady-white;
-//}
-
-.project {
-  color: purple;
+.project_-_languages_--_container,
+.project_-_technologies_--_container,
+.project_-_tools_--_container {
+  //columns: 2 auto;
+  //columns: 2;
+  column-fill: balance;
+  column-count: 2;
+  column-span: all;
+  //column-gap: 40px;
+  //column-rule: 1px solid lightblue;
+  //display: flex;
+  //flex-direction: row-reverse;
 }
+
+.project_-_carousel {
+  background-color: #0c5460;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50% -50%);
+  //display: inline-block;
+  //right: 0;
+  margin: 0 auto;
+  height: 60%;
+  width: 80%;
+}
+
 
 
 
