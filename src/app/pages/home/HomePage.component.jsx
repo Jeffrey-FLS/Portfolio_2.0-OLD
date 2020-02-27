@@ -33,12 +33,9 @@ const HomePage = () => {
                     </div>
                 </div>
 
+
                 {/*<div className="row">*/}
-                    <div className="home_-_scroll">
-                        <div className="home_-_scroll_--_bar">
-                            <div className="home_-_scroll_--_bar-mouse"/>
-                        </div>
-                    </div>
+
                 {/*</div>*/}
 
                 {/*<div className="row">*/}
@@ -49,6 +46,13 @@ const HomePage = () => {
                 {/*    </div>*/}
                 {/*</div>*/}
             </div>
+
+            <div className="home_-_scroll">
+                <div className="home_-_scroll_--_bar">
+                    <div className="home_-_scroll_--_bar-mouse"/>
+                </div>
+            </div>
+
         </div>
     );
 };
