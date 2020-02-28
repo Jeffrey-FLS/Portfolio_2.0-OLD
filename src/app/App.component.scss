@@ -77,9 +77,28 @@
 }
 
 
+// Special Classes -------------------------------------------------------------
+.icon-detail {
+  display: inline-block;
+  text-align: center;
+}
 
+.icon-detail_-_icon {
+  height: 2rem;
+}
 
-// Animation ----------------------------------------------------------------------
+.icon-detail_-_icon img {
+  //width: 100%;
+  height: inherit;
+  //padding: 0;
+  //margin: 0;
+  //display: inline;
+  //position: relative;
+  //line-height: 0;
+
+}
+
+// Animation -------------------------------------------------------------------
 
 // Active ----------------------------------------------------------------------
 

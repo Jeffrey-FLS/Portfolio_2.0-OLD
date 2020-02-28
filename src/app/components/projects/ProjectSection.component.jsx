@@ -3,6 +3,11 @@ import React from 'react';
 
 // Assets
 import './ProjectSection.component.scss';
+// import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import assets from "assets";
+// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+// import {faJsSquare} from "@fortawesome/free-brands-svg-icons";
 
 // Data
 import data from "data";
@@ -35,6 +40,7 @@ import {Carousel} from "./components";
 const ProjectSection = () => {
 
     const project = data.projects[0];
+    const icons = assets.icons;
 
     return (
         <div className="project">
@@ -46,10 +52,15 @@ const ProjectSection = () => {
                     </div>
 
                     <div className="project_-_languages">
-                        <h4>Languages</h4>
+                        <h4>Languages </h4>
 
                         <div className="project_-_languages_--_container">
-                            {project.languages.map(language => <h6>{language}</h6>)}
+                            {project.languages.map(language => <div className="icon-detail">
+                                <div className="icon-detail_-_icon">
+                                    {icons[language.toLowerCase()]}
+                                </div>
+                                <h6>{language}</h6>
+                            </div>)}
                         </div>
                     </div>
                 </div>
