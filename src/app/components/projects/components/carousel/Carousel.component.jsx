@@ -17,6 +17,9 @@ const Carousel = (props) => {
 
             <div className="project-carousel_-_media">
                 <img src={images.tabpik[image]} alt={image}/>
+                <div className="project-carousel_-_media_--_control">
+
+                </div>
                 <div className="project-carousel_-_media_--_nav">
                 </div>
             </div>

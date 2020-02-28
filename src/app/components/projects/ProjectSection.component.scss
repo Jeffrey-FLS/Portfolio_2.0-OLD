@@ -38,6 +38,7 @@
 .project {
   color: white;
   background-color: green;
+  min-height: 600px;
   height: inherit;
   width: inherit;
   display: block;
@@ -48,30 +49,30 @@
 .project_-_languages,
 .project_-_technologies,
 .project_-_tools {
-  position: absolute;
-  width: 40%;
+  //position: absolute;
+  //width: 40%;
 
   h4 {
     position: relative;
   }
 
-  h4::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: yellow;
-    bottom: 0;
-    left: 0;
-  }
+  //h4::after {
+  //  content: '';
+  //  position: absolute;
+  //  height: 2px;
+  //  width: 100%;
+  //  background-color: yellow;
+  //  bottom: 0;
+  //  left: 0;
+  //}
 }
 
 .project_-_description {
   background-color: black;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
+  //display: inline-block;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
   //width: 30%;
 }
 
@@ -92,10 +93,10 @@
 
 .project_-_languages {
   background-color: red;
-  top: 0;
-  right: 0;
-  text-align: right;
-  color: white;
+  //top: 0;
+  //right: 0;
+  //text-align: left;
+  //color: white;
 
   //h6:nth-child(3) {
   //  position: relative;
@@ -132,10 +133,10 @@
 
 .project_-_carousel {
   background-color: #0c5460;
-  position: absolute;
-  top: 20%;
-  left: 0;
-  right: 0;
+  //position: absolute;
+  //top: 20%;
+  //left: 0;
+  //right: 0;
   //top: 50%;
   //left: 50%;
   //transform: translate(-50% -50%);
@@ -147,6 +148,10 @@
 }
 
 
+.project {
+  .col-4 {background-color: orange;}
+  .col-8 {background-color: green;}
+}
 
 
 
