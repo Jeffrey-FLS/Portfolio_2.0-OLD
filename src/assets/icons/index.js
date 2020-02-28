@@ -25,13 +25,6 @@ const jsxImageIcon = (iconName) => {
     return <img src={localIcons[iconName]}  alt={`${iconName}-icon`}/>
 };
 
-// const jsxSvgIcon = (iconName) => {
-//     return <image className="my-svg-alternate" width="96" height="96"
-//                   src="ppngfallback.png"/>
-// };
-
-
-
 const icons = {
     angular: jsxFontAwesomeIcon(faAngular),
     html: jsxFontAwesomeIcon(faHtml5),
