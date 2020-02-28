@@ -90,6 +90,10 @@
 .icon-detail_-_icon img {
   //width: 100%;
   height: inherit;
+  color: white;
+
+  // This turns the icon white
+  filter: invert(100%) sepia(2%) saturate(77%) hue-rotate(23deg) brightness(115%) contrast(100%);
   //padding: 0;
   //margin: 0;
   //display: inline;

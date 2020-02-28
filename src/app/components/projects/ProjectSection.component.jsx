@@ -42,6 +42,23 @@ const ProjectSection = () => {
     const project = data.projects[0];
     const icons = assets.icons;
 
+    // const removeSpaces = (strVal) => {
+    //     return strVal.split('');
+    // };
+
+    const removeSpaceNums = (strVal) => {
+        return strVal.replace(/[0-9\s]/g, '');
+    };
+
+    const jsxIconDetailRender = (arrIcons) => {
+        return arrIcons.map(icon => <div className="icon-detail">
+            <div className="icon-detail_-_icon">
+                {icons[removeSpaceNums(icon).toLowerCase()]}
+            </div>
+            <h6>{icon}</h6>
+        </div>)
+    };
+
     return (
         <div className="project">
             <div className="row">
@@ -55,12 +72,7 @@ const ProjectSection = () => {
                         <h4>Languages </h4>
 
                         <div className="project_-_languages_--_container">
-                            {project.languages.map(language => <div className="icon-detail">
-                                <div className="icon-detail_-_icon">
-                                    {icons[language.toLowerCase()]}
-                                </div>
-                                <h6>{language}</h6>
-                            </div>)}
+                            {jsxIconDetailRender(project.languages)}
                         </div>
                     </div>
                 </div>
@@ -78,14 +90,20 @@ const ProjectSection = () => {
                              <h4>Technologies</h4>
 
                              <div className="project_-_technologies_--_container">
-                                 { project.technologies.map(technology => <h6>{technology}</h6>) }
+                                 {jsxIconDetailRender(project.technologies)}
                              </div>
                          </div>
                 </div>
 
-                {/*<div className="col-4 offset-2">*/}
-                {/*    */}
-                {/*</div>*/}
+                <div className="col-4 offset-2">
+                     <div className="project_-_tools">
+                         <h4>Tools</h4>
+
+                         <div className="project_-_tools_--_container">
+                             {jsxIconDetailRender(project.tools)}
+                         </div>
+                     </div>
+                </div>
             </div>
         </div>
 
