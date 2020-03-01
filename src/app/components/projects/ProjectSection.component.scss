@@ -45,6 +45,16 @@
   position: relative;
 }
 
+.project-left-col {
+ height: auto;
+}
+
+.project-right-col {
+  background-color: green;
+  height: auto;
+
+}
+
 .project_-_description,
 .project_-_languages,
 .project_-_technologies,
@@ -106,15 +116,15 @@
 
 .project_-_technologies {
   background-color: orange;
-  bottom: 0;
-  left: 0;
+  //bottom: 0;
+  //left: 0;
 }
 
 .project_-_tools {
   background-color: gray;
-  bottom: 0;
-  right: 0;
-  text-align: right;
+  //bottom: 0;
+  //right: 0;
+  //text-align: right;
 }
 
 .project_-_languages_--_container,
@@ -133,6 +143,7 @@
 
 .project_-_carousel {
   background-color: #0c5460;
+  //display: block;
   //position: absolute;
   //top: 20%;
   //left: 0;
@@ -142,9 +153,9 @@
   //transform: translate(-50% -50%);
   //display: inline-block;
   //right: 0;
-  margin: 0 auto;
-  height: 60%;
-  width: 80%;
+  //margin: 0 auto;
+  //height: 60%;
+  //width: 80%;
 }
 
 

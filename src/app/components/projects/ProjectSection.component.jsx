@@ -46,14 +46,15 @@ const ProjectSection = () => {
     //     return strVal.split('');
     // };
 
-    const removeSpaceNums = (strVal) => {
-        return strVal.replace(/[0-9\s]/g, '');
+    const spaceUnderscore = (strVal) => {
+        // return strVal.replace(/[0-9\s]/g, '');
+        return strVal.split(' ').join('_');
     };
 
     const jsxIconDetailRender = (arrIcons) => {
         return arrIcons.map(icon => <div className="icon-detail">
             <div className="icon-detail_-_icon">
-                {icons[removeSpaceNums(icon).toLowerCase()]}
+                {icons[spaceUnderscore(icon).toLowerCase()]}
             </div>
             <h6>{icon}</h6>
         </div>)
@@ -62,7 +63,7 @@ const ProjectSection = () => {
     return (
         <div className="project">
             <div className="row">
-                <div className="col-4">
+                <div className="project-left-col col-4">
                     <div className="project_-_description">
                         <h4>{project.name}</h4>
                         <h6>{project.description}</h6>
@@ -77,7 +78,7 @@ const ProjectSection = () => {
                     </div>
                 </div>
 
-                <div className="col-8">
+                <div className="project-right-col col-8">
                          <div className="project_-_carousel">
                              <Carousel project={project}/>
                          </div>

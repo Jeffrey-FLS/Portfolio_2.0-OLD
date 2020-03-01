@@ -14,7 +14,7 @@ const projects = [
             "SCSS"
         ],
         technologies: [
-            "Angular 7",
+            "Angular",
             "Chrome Extension API",
             "Angular Material",
             "RxJS"

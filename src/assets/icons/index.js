@@ -2,6 +2,7 @@ import React from "react";
 
 // Local Icons
 import typescript from './typescript.svg';
+import angular_material from './material-ui.png'
 
 // FontAwesome Icons
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -9,12 +10,19 @@ import {
     faJsSquare,
     faHtml5,
     faSass,
-    faAngular
+    faAngular,
+    faChrome
 } from "@fortawesome/free-brands-svg-icons";
+
+import { faImage } from '@fortawesome/free-solid-svg-icons'
+
+import {GiZeppelin} from "react-icons/all";
+import {DiPhotoshop} from "react-icons/all";
 
 
 const localIcons = {
-    typescript: typescript
+    typescript: typescript,
+    angular_material: angular_material
 };
 
 const jsxFontAwesomeIcon = (icon) => {
@@ -25,14 +33,16 @@ const jsxImageIcon = (iconName) => {
     return <img src={localIcons[iconName]}  alt={`${iconName}-icon`}/>
 };
 
-const temp = {};
+const reactIconSize = 32;
+
+const temp = faImage;
 
 // Mapping Icons
 const icons = {
     angular: jsxFontAwesomeIcon(faAngular),
     angularfire: jsxFontAwesomeIcon(temp),
     angularjs: jsxFontAwesomeIcon(temp),
-    angular_material: jsxFontAwesomeIcon(temp),
+    angular_material: jsxImageIcon('angular_material'),
     arduino: jsxFontAwesomeIcon(temp),
     autocad: jsxFontAwesomeIcon(temp),
     avocode: jsxFontAwesomeIcon(temp),
@@ -42,7 +52,9 @@ const icons = {
     c: jsxFontAwesomeIcon(temp),
     c_plus: jsxFontAwesomeIcon(temp),
     c_sharp: jsxFontAwesomeIcon(temp),
-    chrome_developer_tools: jsxFontAwesomeIcon(temp),
+    chai: jsxFontAwesomeIcon(temp),
+    chrome_developer_tools: jsxFontAwesomeIcon(faChrome),
+    chrome_extension_api: jsxFontAwesomeIcon(faChrome),
     circuitry: jsxFontAwesomeIcon(temp),
     css: jsxFontAwesomeIcon(temp),
     django: jsxFontAwesomeIcon(temp),
@@ -71,13 +83,14 @@ const icons = {
     linux: jsxFontAwesomeIcon(temp),
     material_ui: jsxFontAwesomeIcon(temp),
     materialize_css: jsxFontAwesomeIcon(temp),
+    mocha: jsxFontAwesomeIcon(temp),
     mysql: jsxFontAwesomeIcon(temp),
     nodejs: jsxFontAwesomeIcon(temp),
     nodemcu: jsxFontAwesomeIcon(temp),
     nosql: jsxFontAwesomeIcon(temp),
     oop: jsxFontAwesomeIcon(temp),
     pc_building: jsxFontAwesomeIcon(temp),
-    photoshop: jsxFontAwesomeIcon(temp),
+    photoshop: <DiPhotoshop size={reactIconSize}/>,
     php: jsxFontAwesomeIcon(temp),
     postgre_sql: jsxFontAwesomeIcon(temp),
     powerpoint: jsxFontAwesomeIcon(temp),
@@ -87,6 +100,7 @@ const icons = {
     raspberry_pi: jsxFontAwesomeIcon(temp),
     react: jsxFontAwesomeIcon(temp),
     react_native: jsxFontAwesomeIcon(temp),
+    redux: jsxFontAwesomeIcon(temp),
     repertier: jsxFontAwesomeIcon(temp),
     robotics: jsxFontAwesomeIcon(temp),
     ruby: jsxFontAwesomeIcon(temp),
@@ -106,7 +120,7 @@ const icons = {
     webpack: jsxFontAwesomeIcon(temp),
     webstorm: jsxFontAwesomeIcon(temp),
     worm: jsxFontAwesomeIcon(temp),
-    zeplin: jsxFontAwesomeIcon(temp)
+    zeplin: <GiZeppelin size={reactIconSize}/>
 };
 
 export default icons;

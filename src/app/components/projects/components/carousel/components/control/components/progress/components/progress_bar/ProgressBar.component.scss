@@ -28,84 +28,31 @@
 */
 
 // Imports ---------------------------------------------------------------------
-@import './../styles/_palette.scss';
+//@import './../../../styles/_palette.scss';
 
 
 /*******************************************************************************
 * Default |
 *********/
 
-//body {
-//  background-color: $palette-shady-white;
-//}
-
-.App {
+.progress-bar {
+  background-color:yellow;
   display: block;
   position: relative;
-  //padding: 15px;
-
-  //&::before {
-  //  content: '';
-  //  position: absolute;
-  //  background-color: red;
-  //  height: 100%;
-  //  width: 100%;
-  //  margin: 5px;
-  //  //margin: 15px;
-  //  display: inline-block;
-  //  //z-index: 10;
-  //}
+  height: 5px;
+  min-width: 100px;
+  width: 200px;
 }
 
-.app_-_main {
-  display: block;
-}
+.progress-bar--bar {
 
-.app_-_main_--_section {
-  margin: 150px 0;
-  background-color: blue;
-  height: auto;
-  width: inherit;
-  //padding: 150px 0;
-}
-
-.app_-_footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 
-// Special Classes -------------------------------------------------------------
-.icon-detail {
-  background-color: lime;
-  padding: 10px;
-  width: 100px;
-  //display: inline-block;
-  text-align: center;
-}
 
-.icon-detail_-_icon {
-  height: 2rem;
-}
 
-.icon-detail_-_icon img {
-  //width: 100%;
-  height: inherit;
-  color: white;
 
-  // This turns the icon white
-  filter: invert(100%) sepia(2%) saturate(77%) hue-rotate(23deg) brightness(115%) contrast(100%);
-  //padding: 0;
-  //margin: 0;
-  //display: inline;
-  //position: relative;
-  //line-height: 0;
-
-}
-
-// Animation -------------------------------------------------------------------
+// Animation ----------------------------------------------------------------------
 
 // Active ----------------------------------------------------------------------
 
