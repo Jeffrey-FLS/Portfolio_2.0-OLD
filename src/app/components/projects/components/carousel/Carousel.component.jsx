@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import './Carousel.component.scss';
 
 import images from "assets/images";
-import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
+// import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
 
 const Carousel = (props) => {
     const [count, setCount] = useState(0);
@@ -25,7 +25,7 @@ const Carousel = (props) => {
                     <div className="cm_--_control">
                         <h4>{count}</h4>
                         <div className="cm_--_control_---_progress-bar">
-                            <ProgressBar/>
+                            {/*<ProgressBar/>*/}
                         </div>
                         <h4>{amount}</h4>
                     </div>

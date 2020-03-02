@@ -2,12 +2,12 @@
 import React from 'react';
 
 // Assets
-import './HomePage.component.scss';
+import './Control.component.scss';
 
-const HomePage = () => {
+const Control = () => {
     return (
-        <h1>Hello From HomePage</h1>
+        <h1>Hello From Control</h1>
     );
 };
 
-export default HomePage;
+export default Control;
