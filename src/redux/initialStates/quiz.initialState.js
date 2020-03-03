@@ -1,4 +1,6 @@
-import imgPlaceholder from "assets/images/img-placeholder.png";
+// import imgPlaceholder from "assets/images/img-placeholder.png";
+
+const imgPlaceholder = null;
 
 const quizInitialState = {
     id: 2,

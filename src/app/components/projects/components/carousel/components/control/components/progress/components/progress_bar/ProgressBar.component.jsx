@@ -9,8 +9,8 @@ const ProgressBar = (props) => {
 
     return (
         <div className="progress-bar">
-            <div className="progress-bar--bar"
-                style={{width: props.progress}}/>
+            <div className="progress-bar_-_bar"
+                style={{width: `${props.progress}%`}}/>
         </div>
     );
 };

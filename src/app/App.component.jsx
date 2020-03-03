@@ -52,31 +52,31 @@ const sections = [
 function App() {
     return (
         <div className="App">
-            {/*<Header/>*/}
-            {/*<div className="app_-_home">*/}
-            {/*    <HomePage/>*/}
-            {/*</div>*/}
+            <Header/>
+            <div className="app_-_home">
+               <HomePage/>
+            </div>
 
-            {/*<main className="app_-_main container">*/}
-            {/*    {sections.map((section) => {*/}
-            {/*        return (<div className="row">*/}
-            {/*            <div className="app_-_main_--_section col-12">*/}
-            {/*                {section}*/}
-            {/*            </div>*/}
-            {/*        </div>);*/}
-            {/*    })}*/}
-            {/*</main>*/}
+            <main className="app_-_main container">
+               {sections.map((section) => {
+                    return (<div className="row">
+                        <div className="app_-_main_--_section col-12">
+                            {section}
+                        </div>
+                    </div>);
+                })}
+            </main>
 
-            <TestPage/>
+            {/* <TestPage/> */}
 
-            {/*  <Switch>*/}
-            {/*  /!*<Route path="/userMain" render={(routerProps) => <UserMenuPage quizzes={this.state.quizzes} {...routerProps}/>}/>*!/*/}
-            {/*  <Route path="/" component={HomePage}/>*/}
-            {/*</Switch>*/}
+              {/* <Switch>
+                <Route path="/userMain" render={(routerProps) => <UserMenuPage quizzes={this.state.quizzes} {...routerProps}/>}/>
+              <Route path="/" component={HomePage}/>
+            </Switch> */}
 
-            {/*<div className="app_-_footer">*/}
-            {/*    <Footer/>*/}
-            {/*</div>*/}
+            <div className="app_-_footer">
+                <Footer/>
+            </div>
         </div>
     );
 }

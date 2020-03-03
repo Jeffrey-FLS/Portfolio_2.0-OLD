@@ -5,30 +5,32 @@ import React, { useState } from 'react';
 import './Carousel.component.scss';
 
 import images from "assets/images";
+import {Control} from "./components";
 // import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
 
 const Carousel = (props) => {
-    const [count, setCount] = useState(0);
-    const [amount, setAmount] = useState(0);
+    const image = props.projects.images[0];
+    // const images = props.projects.images;
+
+    const [count, setCount] = useState(1);
+    const [amount, setAmount] = useState(5);
 
 
-    const image = props.project.images[0];
+
+    const handleClickNextSlide = () => {
+
+    };
+
+    const handleClickPreviousSlide = () => {
+
+    };
 
     return (
         <div className="carousel">
-
-            {/*{alert(images[image])}*/}
-
             <div className="carousel_-_media">
                 <img src={images.tabpik[image]} alt={image}/>
                 <div className="carousel_-_media_--_control">
-                    <div className="cm_--_control">
-                        <h4>{count}</h4>
-                        <div className="cm_--_control_---_progress-bar">
-                            {/*<ProgressBar/>*/}
-                        </div>
-                        <h4>{amount}</h4>
-                    </div>
+                    <Control count={count} amount={amount}/>
                 </div>
                 <div className="carousel_-_media_--_nav">
                 </div>

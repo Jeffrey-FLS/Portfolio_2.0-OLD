@@ -28,16 +28,50 @@
 */
 
 // Imports ---------------------------------------------------------------------
-@import './../../../styles/_palette.scss';
+//@import './../../../styles/_palette.scss';
 
 
 /*******************************************************************************
 * Default |
 *********/
 
-//body {
-//  background-color: $palette-shady-white;
-//}
+.control {
+  //$outpost: -60px;
+
+  background-color: rgba(red, 0.5);
+  height: 180px;
+  width: 350px;
+  //position: absolute;
+  //bottom: $outpost;
+  //right: $outpost;
+  border-radius: inherit;
+  position: relative;
+  display: block;
+  //padding: 10px;
+  //z-index: 1;
+}
+
+.control_-_progress {
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  //height: auto;
+  padding: 10px;
+  //display: block;
+}
+
+.control_-_progress h4 {
+  background-color: grey;
+  display: inline;
+  padding: 0 5px;
+}
+
+.control_-_progress_--_progress-bar {
+  background-color: orange;
+  display: inline-block;
+  margin: 5px;
+}
 
 
 

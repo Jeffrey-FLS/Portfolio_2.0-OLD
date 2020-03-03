@@ -88,9 +88,8 @@
 .carousel_-_media_--_control {
   $outpost: -60px;
 
-  background-color: red;
-  height: 180px;
-  width: 350px;
+  background-color: green;
+  display: inline-block;
   position: absolute;
   bottom: $outpost;
   right: $outpost;

@@ -6,14 +6,22 @@ import './TestPage.component.scss';
 import {Helmet} from "react-helmet";
 import {Carousel} from "../../components/projects/components";
 
+// Data
+import data from "data";
+// import assets from "../../../assets";
+
+
 const TestPage = () => {
+    const projects = data.projects[0];
+    // const icons = assets.icons;
+
     return (
         <div className="test-page">
             <Helmet>
                 <style>{'body { background-color: #212121; }'}</style>
             </Helmet>
 
-            <Carousel/>
+            <Carousel projects={projects}/>
         </div>
     );
 };
