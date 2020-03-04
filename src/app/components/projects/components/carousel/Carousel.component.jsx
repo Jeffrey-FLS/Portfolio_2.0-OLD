@@ -4,12 +4,13 @@ import React, { useState } from 'react';
 // Assets
 import './Carousel.component.scss';
 
+// import images from "assets/images";
 import images from "assets/images";
 import {Control} from "./components";
 // import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
 
 const Carousel = (props) => {
-    const image = props.projects.images[0];
+    const image = props.project.images[0];
     // const images = props.projects.images;
 
     const [count, setCount] = useState(1);
@@ -17,13 +18,13 @@ const Carousel = (props) => {
 
 
 
-    const handleClickNextSlide = () => {
+    // const handleClickNextSlide = () => {
 
-    };
+    // };
 
-    const handleClickPreviousSlide = () => {
+    // const handleClickPreviousSlide = () => {
 
-    };
+    // };
 
     return (
         <div className="carousel">
