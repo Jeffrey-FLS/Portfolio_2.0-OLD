@@ -13,13 +13,13 @@ import {
     Header
 } from "./regions";
 
-import {
-    AboutSection,
-    BlogSection,
-    ContactSection,
-    ExperienceSection,
-    ProjectSection
-} from "./components";
+// import {
+//     AboutSection,
+//     BlogSection,
+//     ContactSection,
+//     ExperienceSection,
+//     ProjectSection
+// } from "./components";
 
 import {
     HomePage, TestPage
@@ -41,23 +41,23 @@ import {
 //     ContactSection
 // ];
 
-const sections = [
-    <ProjectSection/>,
-    <ExperienceSection/>,
-    <BlogSection/>,
-    <AboutSection/>,
-    <ContactSection/>
-];
+// const sections = [
+//     <ProjectSection/>,
+//     <ExperienceSection/>,
+//     <BlogSection/>,
+//     <AboutSection/>,
+//     <ContactSection/>
+// ];
 
 function App() {
     return (
         <div className="App">
             <Header/>
-            <div className="app_-_home">
+            {/* <div className="app_-_home">
                <HomePage/>
-            </div>
+            </div> */}
 
-            <main className="app_-_main container">
+            {/* <main className="app_-_main container">
                {sections.map((section) => {
                     return (<div className="row">
                         <div className="app_-_main_--_section col-12">
@@ -65,14 +65,18 @@ function App() {
                         </div>
                     </div>);
                 })}
-            </main>
+            </main> */}
 
             {/* <TestPage/> */}
 
-              {/* <Switch>
-                <Route path="/userMain" render={(routerProps) => <UserMenuPage quizzes={this.state.quizzes} {...routerProps}/>}/>
-              <Route path="/" component={HomePage}/>
-            </Switch> */}
+            {/* <HomePage/> */}
+
+            <main className="app_-_main container">
+                <Switch>
+                    <Route path="/test" component={TestPage}/>
+                    <Route path="/" component={HomePage}/>
+                </Switch>
+            </main>
 
             <div className="app_-_footer">
                 <Footer/>
@@ -82,3 +86,6 @@ function App() {
 }
 
 export default App;
+
+
+                // {/* <Route path="/userMain" render={(routerProps) => <UserMenuPage quizzes={this.state.quizzes} {...routerProps}/>}/> */}
