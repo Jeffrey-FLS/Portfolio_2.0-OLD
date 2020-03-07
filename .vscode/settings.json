@@ -1,0 +1,7 @@
+{
+  "editor.fontSize": 15,
+  "window.zoomLevel": 1,
+  "cSpell.words": ["tabpik"],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "non-relative"
+}

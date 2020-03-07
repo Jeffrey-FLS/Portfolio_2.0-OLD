@@ -9,8 +9,11 @@ import images from "assets/images";
 import {Control} from "./components";
 // import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
 
+/**
+ * @param {{ projects: { images: any[]; }; }} props
+ */
 const Carousel = (props) => {
-    const image = props.project.images[0];
+    const image = props.projects.images[0];
     // const images = props.projects.images;
 
     const [count, setCount] = useState(1);

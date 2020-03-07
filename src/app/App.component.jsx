@@ -25,6 +25,8 @@ import {
     HomePage, TestPage
 } from "./pages";
 
+import { history } from "redux/helpers";
+
 // const sectionsMapper = {
 //     ProjectSection: ProjectSection,
 //     ExperienceSection: ExperienceSection,
@@ -52,7 +54,9 @@ import {
 function App() {
     return (
         <div className="App">
-            <Header/>
+            {/* <Header/> */}
+            {(history.location.pathname !== "/test") && <Header/>}
+
             {/* <div className="app_-_home">
                <HomePage/>
             </div> */}
@@ -80,7 +84,8 @@ function App() {
             </main>
 
             <div className="app_-_footer">
-                <Footer/>
+                {(history.location.pathname !== "/test") && <Footer/>}
+                {/* <Footer/> */}
             </div>
         </div>
     );
