@@ -7,14 +7,18 @@ import ProjectSection from "./sections/projects/ProjectSection.component";
 import IntroSection from "./sections/intro/Intro.component";
 
 // Shared Components
-
+import SocialLinks from './socialLinks/SocialLinks.component';
 
 
 export {
+    // Sections
     IntroSection,
     AboutSection,
     BlogSection,
     ContactSection,
     ExperienceSection,
-    ProjectSection
+    ProjectSection,
+    
+    // Shared Components
+    SocialLinks
 }

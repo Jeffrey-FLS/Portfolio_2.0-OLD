@@ -71,7 +71,8 @@ function App() {
 
             {/* <HomePage/> */}
 
-            <main className="app_-_main container">
+            {/* <main className="app_-_main container"> */}
+            <main className="app_-_main">
                 <Switch>
                     <Route path="/test" component={TestPage}/>
                     <Route path="/" component={HomePage}/>

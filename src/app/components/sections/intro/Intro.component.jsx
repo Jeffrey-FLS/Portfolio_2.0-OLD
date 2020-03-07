@@ -5,7 +5,7 @@ import React from "react";
 import "./Intro.component.scss";
 
 import { Helmet } from "react-helmet";
-import { SocialLinks } from './components';
+import { SocialLinks } from 'app/components';
 
 const IntroSection = () => {
   return (

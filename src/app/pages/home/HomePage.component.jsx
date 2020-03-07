@@ -18,7 +18,7 @@ import {
 } from "app/components";
 
 const sections = [
-  <IntroSection />,
+  // <IntroSection />,
   <ProjectSection />,
   <ExperienceSection />,
   <BlogSection />,
@@ -28,15 +28,21 @@ const sections = [
 
 const HomePage = () => {
   return (
-    <main className="app_-_main container">
-      {sections.map(section => {
-        return (
-          <div className="row">
-            <div className="app_-_main_--_section col-12">{section}</div>
-          </div>
-        );
-      })}
-    </main>
+    <div className="home-page">
+      <div className="app_-_home">
+        <IntroSection/>
+      </div>
+
+      <div className="app_-_main container">
+        {sections.map(section => {
+          return (
+            <div className="row">
+              <div className="app_-_main_--_section col-12">{section}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 

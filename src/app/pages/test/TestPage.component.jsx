@@ -4,7 +4,9 @@ import React from 'react';
 // Assets
 import './TestPage.component.scss';
 import {Helmet} from "react-helmet";
-import {Carousel} from "../../components/projects/components";
+// import {Carousel} from "../../components/sections/projects/components";
+import {Carousel} from "../../../app/components/sections/projects/components";
+
 
 // Data
 import data from "data";
