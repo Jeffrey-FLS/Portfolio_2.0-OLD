@@ -74,7 +74,7 @@
 
 .carousel_-_media img {
   height: 100%;
-  opacity: 0;
+  // opacity: 0;
   //width: 100%;
   position: relative;
   object-fit: cover;
@@ -88,7 +88,7 @@
 .carousel_-_media_--_control {
   $outpost: -60px;
 
-  background-color: green;
+  // background-color: green;
   display: inline-block;
   position: absolute;
   bottom: $outpost;

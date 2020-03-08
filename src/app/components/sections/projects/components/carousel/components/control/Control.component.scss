@@ -35,10 +35,16 @@
 * Default |
 *********/
 
+
+// Variables -------------------------------------------------------------------
+  $background-opacity: 0;
+//------------------------------------------------------------------------------
+
+
 .control {
   //$outpost: -60px;
-
-  background-color: rgba(red, 0.5);
+  // TODO: Find the correct element thats setting this to green
+  background-color: #757575;
   height: 180px;
   width: 350px;
   //position: absolute;
@@ -52,7 +58,7 @@
 }
 
 .control_-_progress {
-  background-color: green;
+  // background-color: #212121;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -62,17 +68,50 @@
 }
 
 .control_-_progress h4 {
-  background-color: grey;
+  // background-color: white;
   display: inline;
   padding: 0 5px;
 }
 
 .control_-_progress_--_progress-bar {
-  background-color: orange;
+  background-color: #fafafa;
   display: inline-block;
   margin: 5px;
 }
 
+.control_-_navigation {
+  background-color: rgba(red, $background-opacity);
+  // text-align: right;
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  // bottom: 0;
+}
+
+.control_-_navigation_--_next {
+  background-color: rgba(grey, $background-opacity);
+}
+
+.control_-_navigation_--_next,
+.control_-_navigation_--_previous {
+  // padding: 10px 0;
+  // padding: 0;
+  margin: 0;
+  width: auto;
+  // color: #212121;
+  // display: inline;
+}
+
+.control_-_navigation_--_next--icon,
+.control_-_navigation_--_previous--icon {
+  // color: red;
+  cursor: pointer;
+  padding: 5px 0;
+  color: #fafafa;
+
+
+}
 
 
 

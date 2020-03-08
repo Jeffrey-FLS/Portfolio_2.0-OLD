@@ -1,7 +1,12 @@
 {
   "editor.fontSize": 15,
-  "window.zoomLevel": 1,
-  "cSpell.words": ["tabpik"],
+  "editor.rulers": [80],
+  "window.zoomLevel": 0,
+  "cSpell.words": [
+    "fontawesome",
+    "fortawesome",
+    "tabpik"
+  ],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.importModuleSpecifier": "non-relative"
 }

@@ -96,7 +96,7 @@ const ProjectSection = () => {
                          </div>
                 </div>
 
-                <div className="col-4 offset-2">
+                <div className="col-4">
                      <div className="project_-_tools">
                          <h4>Tools</h4>
 
