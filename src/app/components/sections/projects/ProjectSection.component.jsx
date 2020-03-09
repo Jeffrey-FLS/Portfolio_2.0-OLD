@@ -13,6 +13,9 @@ import assets from "assets";
 import data from "data";
 import {Carousel} from "./components";
 
+// import {Helmet} from "react-helmet";
+
+
 
 //
 // const dataColumn = (data) => {
@@ -62,6 +65,10 @@ const ProjectSection = () => {
 
     return (
         <div className="project">
+            {/* <Helmet>
+                <style>{'body { background-color: #fafafa; }'}</style>
+            </Helmet> */}
+
             <div className="row">
                 <div className="project-left-col col-4">
                     <div className="project_-_description">

@@ -29,6 +29,7 @@
 
 // Imports ---------------------------------------------------------------------
 //@import './../../../styles/_palette.scss';
+@import './../../../../../../styles/mixins.scss';
 
 
 /*******************************************************************************
@@ -38,7 +39,9 @@
 .carousel {
   display: block;
   position: relative;
-  background-color: blue;
+  // @include background-layer();
+
+  // background-color: blue;
   min-height: 300px;
   height: 400px;
   width: 100%;
@@ -48,7 +51,7 @@
 }
 
 .carousel_-_media {
-  background-color: gray;
+  // background-color: gray;
   //display: inline-block;
   //float: left;
   height: 90%;

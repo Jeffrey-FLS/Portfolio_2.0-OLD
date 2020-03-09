@@ -1,0 +1,48 @@
+// // Placeholder
+// .plc {
+//     background-color: #BDBDBD;
+  
+//     > .plc {
+//       background-color: #9E9E9E;
+  
+//       > .plc {
+//         background-color: #757575;
+//       }
+//     }
+  
+//     > > .plc {
+//       background-color: #9E9E9E;
+  
+//       > > .plc {
+//         background-color: #757575;
+//       }
+//     }
+  
+//     > > > .plc {
+//       background-color: #9E9E9E;
+  
+//       > > > .plc {
+//         background-color: #757575;
+//       }
+  
+//     }
+//   }
+
+// @mixin pseudo($display: block, $pos: absolute, $content: '') {
+//     content: $content;
+//     display: $display;
+//     position: $pos;
+// }
+
+@mixin background-layer() {
+    background-color: green;
+
+    & > div {
+        background-color: blue;
+
+        & > div {
+            background-color: red;
+    
+        }
+    } 
+}
