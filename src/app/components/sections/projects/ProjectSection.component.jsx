@@ -13,9 +13,6 @@ import assets from "assets";
 import data from "data";
 import {Carousel} from "./components";
 
-// import {Helmet} from "react-helmet";
-
-
 
 //
 // const dataColumn = (data) => {
