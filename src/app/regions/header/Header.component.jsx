@@ -67,7 +67,7 @@ const Header = () => {
 
 
     return (
-        <header className="header">
+        <div className="header">
             <div className="header_-_logo">
                 <Link to="/home"><img src={logo} alt="logo"/></Link>
             </div>
@@ -101,7 +101,7 @@ const Header = () => {
                                 aria-controls={navId}/>
                 </div>
             </div>
-        </header>
+        </div>
     );
 };
 

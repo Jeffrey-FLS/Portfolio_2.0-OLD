@@ -29,7 +29,7 @@
 
 // Imports ---------------------------------------------------------------------
 // @import './../../../styles/_palette.scss';
-@import '../../../../styles/palette';
+@import '../../../../styles/palette/';
 @import '../../../../styles/mixins';
 
 /*******************************************************************************
@@ -39,7 +39,7 @@
 .project {
   color: white;
   // @include background-layer();
-  // background-color: green;
+  // background-color: $palette-blue-base;
   min-height: 600px;
   height: inherit;
   width: inherit;

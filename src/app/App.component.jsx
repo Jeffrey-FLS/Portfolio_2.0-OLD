@@ -55,7 +55,9 @@ function App() {
     return (
         <div className="App">
             {/* <Header/> */}
-            {(history.location.pathname !== "/test") && <Header/>}
+            <header>
+                {(history.location.pathname !== "/test") && <Header/>}
+            </header>
 
             {/* <div className="app_-_home">
                <HomePage/>
