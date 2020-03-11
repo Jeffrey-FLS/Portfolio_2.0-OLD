@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Assets
-import './TestPage.component.scss';
+import './TestCarousel.component.scss';
 import {Helmet} from "react-helmet";
 // import {Carousel} from "../../components/sections/projects/components";
 import {Carousel} from "app/components/sections/projects/components";
@@ -13,7 +13,7 @@ import data from "data";
 // import assets from "../../../assets";
 
 
-const TestPage = () => {
+const TestCarousel = () => {
     const projects = data.projects[0];
     // const icons = assets.icons;
 
@@ -28,4 +28,4 @@ const TestPage = () => {
     );
 };
 
-export default TestPage;
+export default TestCarousel;
