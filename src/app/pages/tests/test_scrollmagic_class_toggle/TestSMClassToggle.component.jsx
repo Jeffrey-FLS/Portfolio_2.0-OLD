@@ -39,7 +39,7 @@ const ClassToggleStyled = styled.div`
 // STATELESS FUNCTION ----------------------------------------------------------
 
 const TestSMClassToggle = () => {
-  const projects = data.projects[0];
+  // const projects = data.projects[0];
   // const icons = assets.icons;
 
   return (

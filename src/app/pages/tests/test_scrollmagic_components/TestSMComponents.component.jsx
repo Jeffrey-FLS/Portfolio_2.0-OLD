@@ -1,9 +1,9 @@
 // React Components
-import React from "react";
+import React, { useState } from "react";
 
 // Assets
 import "./TestSMComponents.component.scss";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 // import {Carousel} from "../../components/sections/projects/components";
 import { Controller, Scene } from "react-scrollmagic";
 
@@ -17,7 +17,7 @@ import styled from "styled-components";
 
 const ComponentsStyled = styled.div`
   .section {
-    height: 70vh;
+    height: 100vh;
   }
 `;
 
@@ -34,7 +34,10 @@ const StatelessFragment = () => (
 );
 
 const StatelessRef = React.forwardRef((props, ref) => (
-  <div ref={ref}>StatelessRef Component</div>
+  <div ref={ref}>
+    {backgroundChange("green")}
+    <h1>StatelessRef Component</h1>
+  </div>
 ));
 
 class Stateful extends React.Component {
@@ -43,40 +46,94 @@ class Stateful extends React.Component {
   }
 }
 
-const TestSMComponents = () => (
-  <ComponentsStyled>
-    <div className="section" />
-    <Controller>
-      <Scene duration={600} pin={true}>
-        <div>HTML tag</div>
-      </Scene>
-      <Scene duration={600} pin={true}>
-        <StatelessRef />
-      </Scene>
-      <Scene duration={600} pin={true}>
-        <StyledDiv>Styled Component</StyledDiv>
-      </Scene>
-      <Scene duration={600} pin="#stateless" triggerElement="#stateless">
-        <Stateless>Stateless Component</Stateless>
-      </Scene>
-      <Scene duration={600} pin={true}>
-        <div>
-          <Stateless>Stateless Component wrapped</Stateless>
-        </div>
-      </Scene>
-      <Scene
-        duration={600}
-        pin="#statelessFragment"
-        triggerElement="#statelessFragment"
-      >
-        <StatelessFragment />
-      </Scene>
-      <Scene duration={600} pin="#stateful" triggerElement="#stateful">
-        <Stateful />
-      </Scene>
-    </Controller>
-    <div className="section" />
-  </ComponentsStyled>
-);
+const backgroundChange = color => {
+  return (
+    <Helmet>
+      <style>{`body { background-color: ${color}; }`}</style>
+    </Helmet>
+  );
+};
+// var color = 'green';
+
+// const changeColor = strColor => {
+//   color = strColor;
+// };
+
+const duration = 1000;
+
+const TestSMComponents = () => {
+  const [color, setColor] = useState("blue");
+
+  const colorChange = color => {
+    setColor(color);
+  };
+
+  return (
+    <ComponentsStyled>
+      <Helmet>
+        <style>{`body { background-color: ${color}; }`}</style>
+      </Helmet>
+      <div className="section" />
+      {/* <div id="trigger"> 
+        {colorChange("yellow")}
+      </div> */}
+      <Controller>
+        <Scene duration={duration} pin={true} indicators={true}>
+          <div>
+            {/* {backgroundChange("green")} */}
+
+            {/* {changeColor('yellow')} */}
+            <h1>HTML tag</h1>
+          </div>
+        </Scene>
+        <Scene duration={duration} pin={true} indicators={true}>
+          <StatelessRef />
+        </Scene>
+        <Scene
+          duration={duration}
+          pin={true}
+          indicators={true}
+          triggerHook={() => colorChange("yellow")}
+        >
+          <StyledDiv>
+            {/* {backgroundChange("gray")} */}
+
+            <h1>Styled Component</h1>
+          </StyledDiv>
+        </Scene>
+        <Scene
+          duration={duration}
+          pin="#stateless"
+          triggerElement="#stateless"
+          indicators={true}
+        >
+          <Stateless>Stateless Component</Stateless>
+        </Scene>
+        <Scene duration={duration} pin={true} indicators={true}>
+          <div>
+            <Stateless>Stateless Component wrapped</Stateless>
+          </div>
+        </Scene>
+        <Scene
+          duration={duration}
+          pin="#statelessFragment"
+          triggerElement="#statelessFragment"
+          indicators={true}
+        >
+          <StatelessFragment />
+        </Scene>
+        <Scene
+          duration={duration}
+          pin="#stateful"
+          triggerElement="#stateful"
+          indicators={true}
+        >
+          <Stateful />
+        </Scene>
+      </Controller>
+      <div className="section" />
+    </ComponentsStyled>
+  );
+};
 
 export default TestSMComponents;

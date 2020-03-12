@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="App">
       {/* <Header/> */}
-      <header>{history.location.pathname !== "/test" && <Header />}</header>
+      <header>{history.location.pathname !== "/tests" && <Header />}</header>
 
       {/* <div className="app_-_home">
                <HomePage/>
@@ -77,13 +77,15 @@ function App() {
       {/* <main className="app_-_main container"> */}
       <main className="app_-_main">
         <Switch>
+          <Route path="/tests/class-toggle" component={TestPage.TestSMClassToggle} />
+          <Route path="/tests/components" component={TestPage.TestSMComponents} />
           <Route path="/tests" component={TestPage.TestSMComponents} />
           <Route path="/" component={HomePage} />
         </Switch>
       </main>
 
       <div className="app_-_footer">
-        {history.location.pathname !== "/test" && <Footer />}
+        {history.location.pathname !== "/tests" && <Footer />}
         {/* <Footer/> */}
       </div>
     </div>
