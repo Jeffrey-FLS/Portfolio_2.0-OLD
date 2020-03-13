@@ -51,8 +51,10 @@ import { history } from "redux/helpers";
 function App() {
   return (
     <div className="App" id="app">
-      {/* <Header/> */}
-      <header>{history.location.pathname !== "/tests" && <Header />}</header>
+      <header>
+        {/* {history.location.pathname !== "/tests" && <Header />} */}
+        <Header/>
+      </header>
 
       {/* <div className="app_-_home">
                <HomePage/>
@@ -79,15 +81,15 @@ function App() {
         <Switch>
           <Route path="/tests/class-toggle" component={TestPage.TestSMClassToggle} />
           <Route path="/tests/components" component={TestPage.TestSMComponents} />
-          <Route path="/tests" component={TestPage.TestSMComponents} />
+          <Route path="/tests" component={TestPage.TestHomePage} />
           <Route path="/" component={HomePage} />
         </Switch>
       </main>
 
-      <div className="app_-_footer">
-        {history.location.pathname !== "/tests" && <Footer />}
-        {/* <Footer/> */}
-      </div>
+      <footer className="app_-_footer">
+        {/* {history.location.pathname !== "/tests" && <Footer />} */}
+        <Footer/>
+      </footer>
     </div>
   );
 }
