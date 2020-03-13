@@ -6,6 +6,7 @@ import "./TestSMComponents.component.scss";
 import { Helmet } from "react-helmet";
 // import {Carousel} from "../../components/sections/projects/components";
 import { Controller, Scene } from "react-scrollmagic";
+import { Tween } from "react-gsap";
 
 // Data
 // import data from "data";
@@ -22,7 +23,7 @@ const ComponentsStyled = styled.div`
 `;
 
 const StyledDiv = styled.div`
-  background-color: red;
+  background-color: yellow;
 `;
 
 const Stateless = ({ children }) => <div id="stateless">{children}</div>;
@@ -35,7 +36,7 @@ const StatelessFragment = () => (
 
 const StatelessRef = React.forwardRef((props, ref) => (
   <div ref={ref}>
-    {backgroundChange("green")}
+    {/* {backgroundChange("green")} */}
     <h1>StatelessRef Component</h1>
   </div>
 ));
@@ -59,7 +60,7 @@ const backgroundChange = color => {
 //   color = strColor;
 // };
 
-const duration = 1000;
+const duration = 500;
 
 const TestSMComponents = () => {
   const [color, setColor] = useState("blue");
@@ -70,9 +71,9 @@ const TestSMComponents = () => {
 
   return (
     <ComponentsStyled>
-      <Helmet>
+      {/* <Helmet>
         <style>{`body { background-color: ${color}; }`}</style>
-      </Helmet>
+      </Helmet> */}
       <div className="section" />
       {/* <div id="trigger"> 
         {colorChange("yellow")}
@@ -87,19 +88,42 @@ const TestSMComponents = () => {
           </div>
         </Scene>
         <Scene duration={duration} pin={true} indicators={true}>
-          <StatelessRef />
+          {/* <Tween from={{ x: "100px", rotation: -360 }}> */}
+          <Tween
+            from={
+              // @ts-ignore
+              ("#App", 1, { backgroundColor: "white" })
+            }
+            to={
+              // @ts-ignore
+              ("#App", 1, { backgroundColor: "#212121" })
+            }
+          >
+            {/* {backgroundChange("gray")} */}
+
+            <StatelessRef />
+          </Tween>
         </Scene>
         <Scene
           duration={duration}
           pin={true}
           indicators={true}
-          triggerHook={() => colorChange("yellow")}
         >
-          <StyledDiv>
-            {/* {backgroundChange("gray")} */}
+          {/* <StyledDiv> */}
+          <Tween
+            from={
+              // @ts-ignore
+              (".trash", 5, { backgroundColor: "#212121" })
+            }
+            to={
+              // @ts-ignore
+              (".trash", 5, { backgroundColor: "white" })
+            }
+          >
 
-            <h1>Styled Component</h1>
-          </StyledDiv>
+            <h1>NOT Styled Component</h1>
+            </Tween>
+          {/* </StyledDiv> */}
         </Scene>
         <Scene
           duration={duration}

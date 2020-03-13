@@ -50,7 +50,7 @@ import { history } from "redux/helpers";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="app">
       {/* <Header/> */}
       <header>{history.location.pathname !== "/tests" && <Header />}</header>
 
