@@ -27,9 +27,14 @@ const sections = [
 ];
 
 const TestHomePage = () => {
+
+  const handleScroll = (event) => {
+    console.log(event);
+  }
+
   return (
     <div className="home-page">
-      <div className="app_-_home">
+      <div id="intro" className="app_-_home">
         <IntroSection/>
       </div>
 
@@ -37,7 +42,8 @@ const TestHomePage = () => {
         {sections.map(section => {
           return (
             <div className="row">
-              <div className="app_-_main_--_section col-12">{section}</div>
+              <div className="app_-_main_--_section col-12" onScroll={handleScroll}>{section}</div>
+              <h1 style={{color: "white"}}><a href="#intro">CLICK ME</a></h1>
             </div>
           );
         })}

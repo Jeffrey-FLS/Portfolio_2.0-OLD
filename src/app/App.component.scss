@@ -36,6 +36,10 @@
 * Default |
 *********/
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   display: block;
   position: relative;

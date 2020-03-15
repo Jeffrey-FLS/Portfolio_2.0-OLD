@@ -36,7 +36,7 @@
 * Default |
 *********/
 
-//.home-base{
+//.test-home-base{
 //  //background-color: green;
 //  position: fixed;
 //  width: 100%;
@@ -50,7 +50,7 @@
 //  //top:0;
 //}
 
-.home {
+.test-home {
   background-color: gray;
   //position: relative;
   //width: fit-content;
@@ -84,7 +84,7 @@
   //width: 100vw;
 }
 
-.home_-_social-links {
+.test-home_-_social-links {
   //background-color: green;
   position: absolute;
   bottom: 0;
@@ -96,7 +96,7 @@
   //width: 10%;
 }
 
-.home_-_intro-about {
+.test-home_-_intro-about {
   //display: inline-block;
   background-color: green;
   height: 200px;
@@ -105,7 +105,7 @@
   color: white;
 }
 
-.home_-_circle-menu {
+.test-home_-_circle-menu {
   //background-color: green;
   //margin-top: 8%;
   //height: auto;
@@ -128,7 +128,7 @@
   //transform: translate(-25% -25%);
 }
 
-.home_-_scroll {
+.test-home_-_scroll {
   //background-color: blue;
   height: 30px;
   //width: ;
@@ -140,7 +140,7 @@
   display: block;
 }
 
-.home_-_scroll_--_bar {
+.test-home_-_scroll_--_bar {
   &::before,
   &::after {
     content: '';
@@ -161,7 +161,7 @@
   }
 }
 
-.home_-_scroll_--_bar-mouse {
+.test-home_-_scroll_--_bar-mouse {
   //background-color: blue;
   height: 30px;
   width: 18px;
@@ -206,7 +206,10 @@
 }
 
 
-
+.app_-_main_--_section {
+  background-color: green;
+  height: 100vh;
+}
 
 
 // Animation -------------------------------------------------------------------
