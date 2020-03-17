@@ -79,13 +79,15 @@ const TestSMComponents = () => {
         {colorChange("yellow")}
       </div> */}
       <Controller>
-        <Scene duration={duration} pin={true} indicators={true}>
+        <Scene duration={duration} pin={true} indicators={true} on={() => {alert("ELLLO")}}>
+        <Tween to={console.log("hello")}>
           <div>
             {/* {backgroundChange("green")} */}
 
             {/* {changeColor('yellow')} */}
             <h1>HTML tag</h1>
           </div>
+          </Tween>
         </Scene>
         <Scene duration={duration} pin={true} indicators={true}>
           {/* <Tween from={{ x: "100px", rotation: -360 }}> */}
@@ -152,7 +154,10 @@ const TestSMComponents = () => {
           triggerElement="#stateful"
           indicators={true}
         >
-          <Stateful />
+        <Tween to={console.log("NO")}>
+              <h1>HELLLWO WWOORRLDLLDDLLD</h1>
+          {/* <Stateful /> */}
+          </Tween>
         </Scene>
       </Controller>
       <div className="section" />
