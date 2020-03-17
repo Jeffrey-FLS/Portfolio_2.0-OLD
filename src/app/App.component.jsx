@@ -48,6 +48,8 @@ import { history } from "redux/helpers";
 //     <ContactSection/>
 // ];
 
+//  Commenting for commit change
+
 function App() {
   return (
     <div className="App" id="app">
@@ -59,6 +61,8 @@ function App() {
       {/* <div className="app_-_home">
                <HomePage/>
             </div> */}
+
+
 
       {/* <main className="app_-_main container">
                {sections.map((section) => {
