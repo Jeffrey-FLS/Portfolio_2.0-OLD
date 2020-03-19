@@ -18,7 +18,7 @@ import { Footer, Header } from "./regions";
 //     ProjectSection
 // } from "./components";
 
-import { HomePage, TestPage } from "./pages";
+import { HomePage, TestsPage } from "./pages";
 
 import { Controller, Scene } from "react-scrollmagic";
 
@@ -83,11 +83,12 @@ function App() {
       {/* <main className="app_-_main container"> */}
       <main className="app_-_main">
         <Switch>
-          <Route path="/tests/onscroll" component={TestPage.TestOnScroll} />
+          {/* <Route path="/tests/onscroll" component={TestPage.TestOnScroll} />
           <Route path="/tests/ref" component={TestPage.TestRef} />
           <Route path="/tests/class-toggle" component={TestPage.TestSMClassToggle} />
           <Route path="/tests/components" component={TestPage.TestSMComponents} />
-          <Route path="/tests" component={TestPage.TestHomePage} />
+          <Route path="/tests" component={TestPage.TestHomePage} /> */}
+          <Route path="/tests" component={TestsPage} />
           <Route path="/" component={HomePage} />
         </Switch>
       </main>

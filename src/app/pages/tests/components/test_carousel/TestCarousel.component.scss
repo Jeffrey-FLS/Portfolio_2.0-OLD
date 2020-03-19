@@ -28,10 +28,10 @@
 */
 
 // Imports ---------------------------------------------------------------------
-// @import './../../../styles/_palette.scss';
-@import '../../../../styles/palette';
+// @import '../../../../styles/palette';
+@import 'styles/palette';
 
-.test-page-2 {
+.test-page {
   background-color:yellow;
   display: block;
   margin: 10% auto;

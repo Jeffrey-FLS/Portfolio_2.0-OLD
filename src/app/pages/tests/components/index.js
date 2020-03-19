@@ -5,15 +5,17 @@ import TestSMComponents from './test_scrollmagic_components/TestSMComponents.com
 import TestHomePage from './test_homepage/TestHomePage.component';
 import TestRef from './test_ref/TestRef.component';
 import TestOnScroll from './test_onscroll/TestOnScroll.component';
+import TestWaypoint from './test_waypoint/TestWaypoint.component';
 
 /** @type {any} */
-const TestPage = {
+const TestComponents = {
     TestCarousel,
     TestSMClassToggle,
     TestSMComponents,
     TestHomePage,
     TestRef,
-    TestOnScroll
+    TestOnScroll,
+    TestWaypoint
 };
 
-export default TestPage;
+export default TestComponents;

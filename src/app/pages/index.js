@@ -1,8 +1,8 @@
 
 import HomePage from "./home/HomePage.component";
-import TestPage from "./tests";
+import TestsPage from "./tests/TestsPage.component";
 
 export {
     HomePage,
-    TestPage
+    TestsPage
 }
