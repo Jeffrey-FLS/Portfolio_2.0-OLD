@@ -4,22 +4,26 @@ import React, { useEffect, useRef } from "react";
 // Assets
 import "./TestWaypoint.component.scss";
 
-// import { Waypoint } from "react-waypoint";
+import { Waypoint } from "react-waypoint";
 
 const TestWaypoint = props => {
+
+
+  
+
   const numOfSections = 6;
-  const myElement = useRef();
+  // const myElement = useRef();
 
-  const onScroll = () => {
-    if (myElement.current) {
-      console.log(myElement);
-    }
-  };
+  // const onScroll = () => {
+  //   if (myElement.current) {
+  //     console.log(myElement);
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener(onScroll);
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", onScroll);
+  //   return () => window.removeEventListener(onScroll);
+  // }, []);
 
   const renderSections = num => {
     let arr = new Array(num);
@@ -35,9 +39,9 @@ const TestWaypoint = props => {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
   };
 
-  // const handleWaypointEnter = (ele) => {
-  //   alert(`Entering ${ele}`);
-  // }
+  const handleWaypointEnter = (ele) => {
+    alert(`Entering ${ele}`);
+  }
 
   // const handleWaypointLeave = (ele) => {
   //   alert(`Exiting ${ele}`);
@@ -46,14 +50,19 @@ const TestWaypoint = props => {
   return (
     <div className="test-onscroll">
       <main>
-        {renderSections(numOfSections).map(ele => (
-          <div
-            id={ele}
-            ref={myElement}
-            style={{ backgroundColor: randColorGenerator() }}
+      {renderSections(numOfSections).map(ele => (
+          <Waypoint
+            onEnter={() => handleWaypointEnter(ele)}
+            // onLeave={() => handleWaypointLeave(ele)}
           >
-            <h1>{ele}</h1>
-          </div>
+            <div
+              id={ele}
+              // ref={myElement}
+              style={{ backgroundColor: randColorGenerator() }}
+            >
+              <h1>{ele}</h1>
+            </div>
+          </Waypoint>
         ))}
       </main>
     </div>
