@@ -48,7 +48,7 @@ import { history } from "redux/helpers";
 //     <ContactSection/>
 // ];
 
-//  Commenting for commit change
+//  Commenting for commit
 
 function App() {
   return (
@@ -83,6 +83,7 @@ function App() {
       {/* <main className="app_-_main container"> */}
       <main className="app_-_main">
         <Switch>
+          <Route path="/tests/onscroll" component={TestPage.TestOnScroll} />
           <Route path="/tests/ref" component={TestPage.TestRef} />
           <Route path="/tests/class-toggle" component={TestPage.TestSMClassToggle} />
           <Route path="/tests/components" component={TestPage.TestSMComponents} />
