@@ -1,0 +1,164 @@
+/**
+* Example of property order and category naming convention for comment
+********************************************************************************
+* .class {
+*  //------------------------- Font & Text
+*    text-align: val;
+*    text-shadow: val;
+*  //------------------------- Color & Background
+*    background-color: val;
+*    color: val;
+*    opacity: val;
+*  //------------------------- Box
+*    height: val;
+*    width: val;
+*    border-radius: val;
+*  //------------------------- Positioning
+*    position: absolute;
+*    bottom: 0;
+*  //------------------------- List
+*    property: val;
+*  //------------------------- Table
+*    property: val;
+*  //------------------------- Miscellaneous
+*    property: val;
+*  //------------------------- Effect
+*    property: val;
+* }
+*/
+
+// Imports ---------------------------------------------------------------------
+// @import './../../../styles/_palette.scss';
+@import 'styles/palette';
+
+.test-onscroll {
+  // background-color:yellow;
+  display: block;
+  // margin: 10% auto;
+}
+
+[id^="section"] {
+  background:#282c34;
+  height: 100vh;
+  text-align: center;
+
+  h1 {
+  line-height: 100vh;
+  }
+}
+
+.dot-nav {
+  position: fixed;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  background-color: blue;
+  height: 50%;
+  text-align: center;
+
+
+  ul {
+    text-align: center;
+    padding: 0;
+  }
+
+  li {
+    background-color: green;
+    height: 25px;
+    width: 25px;
+    list-style: none;
+    // text-align: left;
+
+    // text-align: center;
+    // padding: 5px;
+    margin: 5px;
+    border-radius: 25px;
+    // display: inline;
+
+    &:hover {
+      background-color: lightgreen;
+
+      h1 {
+        opacity: 1;
+      }
+    }
+  }
+
+  h1 {
+    // display: inline-block;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    // top: 0;
+    background-color: pink;
+  }
+
+
+  // height: 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*******************************************************************************
+* Default |
+*********/
+
+//body {
+//  background-color: $palette-shady-white;
+//}
+
+
+
+
+
+// Animation ----------------------------------------------------------------------
+
+// Active ----------------------------------------------------------------------
+
+// Hover -----------------------------------------------------------------------
+
+// Layouts ---------------------------------------------------------------------
+
+// Media Sizes -----------------------------------------------------------------
+
+
+/*******************************************************************************
+* XS |
+****/
+
+//@include mq('xs') {
+//
+//}
+
+
+/*******************************************************************************
+* SM |
+****/
+
+//@include mq('sm') {
+//
+//}
+
+
+/*******************************************************************************
+* MD |
+****/
+
+//@include mq('md') {
+//
+//}
+
+
+/*******************************************************************************
+* LG |
+****/
+
+//@include mq('lg') {
+//
+//}
+

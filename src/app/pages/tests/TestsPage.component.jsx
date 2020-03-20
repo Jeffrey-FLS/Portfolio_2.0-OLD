@@ -19,6 +19,8 @@ const TestsPage = () => {
     <div className="TestsPage" id="TestsPage">
       <main className="TestsPage_-_main">
         <Switch>
+          <Route path={`/${testURL}/waypointcomponents2`} component={TestComponents.TestWaypointComponents} />
+          <Route path={`/${testURL}/waypointcomponents`} component={TestComponents.TestWaypointComponents} />
           <Route path={`/${testURL}/waypoint`} component={TestComponents.TestWaypoint} />
           <Route path={`/${testURL}/onscroll`} component={TestComponents.TestOnScroll} />
           <Route path={`/${testURL}/ref`} component={TestComponents.TestRef} />
