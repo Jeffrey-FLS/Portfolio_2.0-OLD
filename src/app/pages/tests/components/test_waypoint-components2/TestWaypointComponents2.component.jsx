@@ -28,7 +28,7 @@ const TestWaypointComponents2 = props => {
     let arr = new Array(num);
 
     for (let i = 0; i < num; i++) {
-      arr[i] = `section-${i + 1}`;
+      arr[i] = `section_${i + 1}`;
     }
 
     return arr;
@@ -48,27 +48,76 @@ const TestWaypointComponents2 = props => {
 
   const duration = 500;
 
+  // const tweenSettingsTo = ("", 1, { backgroundColor: "white", color: "black" });
+  // const tweenSettingsFrom = ("", 1, { backgroundColor: "#212121", color: "white" });
+
+  const sectBgColor = {
+    // section_0: {
+    //   from: "pink",
+    //   to: "white"
+    // },
+    section_1: {
+      from: "pink",
+      to: "white"
+    },
+    section_2: {
+      from: "white",
+      to: "green"
+    },
+    section_3: {
+      from: "green",
+      to: "pink"
+    },
+    section_4: {
+      from: "pink",
+      to: "gray"
+    },
+    section_5: {
+      from: "gray",
+      to: "blue"
+    },
+    section_6: {
+      from: "green",
+      to: "white"
+    }
+  };
+
+  const tweenSettingsFrom = (ele) => {
+    return (sectBgColor[ele])
+      ? { backgroundColor: sectBgColor[ele].from, color: "black" }
+      : { backgroundColor: "white",color: "black" };
+  }; 
+
+  const tweenSettingsTo = (ele) => {
+    return (sectBgColor[ele])
+      ? { backgroundColor: sectBgColor[ele].to, color: "black" }
+      : { backgroundColor: "white",color: "black" };
+  }; 
+
+
+
 
   return (
     <div className="test-onscroll">
       <main>
       <Controller>
-        {renderSections(numOfSections).map((ele, index) => (
+        {renderSections(numOfSections).map(ele => (
           //<Waypoint
             //onEnter={() => handleWaypointEnter(ele)}
-            // onLeave={() => handleWaypointLeave(ele)}
+             //onLeave={() => handleWaypointLeave(ele)}
           //>
             <Scene duration={duration} pin={false} indicators={true}>
               {/* <Tween from={{ x: "100px", rotation: -360 }}> */}
               <Tween
-                to={("#section-1", 1, { backgroundColor: "white", color: "black" })}
-                from={("#section-1", 1, { backgroundColor: "#212121", color: "white" })}
+                from={tweenSettingsFrom(ele)}
+                to={tweenSettingsTo(ele)}
                 >
                 <div
                   id={ele}
                   // ref={myElement}
                   // style={{ backgroundColor: randColorGenerator() }}
                 >
+
                   <h1>{ele}</h1>
                 </div>
               </Tween>
