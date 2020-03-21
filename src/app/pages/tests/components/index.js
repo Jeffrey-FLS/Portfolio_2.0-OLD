@@ -9,6 +9,7 @@ import TestWaypoint from './test_waypoint/TestWaypoint.component';
 import TestWaypointComponents from './test_waypoint-components/TestWaypointComponents.component';
 import TestWaypointComponents2 from './test_waypoint-components2/TestWaypointComponents2.component';
 import TestWaypointBg from './test_waypoint-bg/TestWaypointBg.component';
+import TestHomepageWaypoint from './test_homepage_waypoint/TestHomepageWaypoint.component';
 
 /** @type {any} */
 const TestComponents = {
@@ -21,7 +22,8 @@ const TestComponents = {
     TestWaypoint,
     TestWaypointComponents,
     TestWaypointComponents2,
-    TestWaypointBg
+    TestWaypointBg,
+    TestHomepageWaypoint
 };
 
 export default TestComponents;

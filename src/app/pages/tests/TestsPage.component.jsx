@@ -19,6 +19,7 @@ const TestsPage = () => {
     <div className="TestsPage" id="TestsPage">
       <main className="TestsPage_-_main">
         <Switch>
+          <Route path={`/${testURL}/homepage-waypoint`} component={TestComponents.TestHomepageWaypoint} />
           <Route path={`/${testURL}/waypointbg`} component={TestComponents.TestWaypointBg} />
           <Route path={`/${testURL}/waypointcomponents2`} component={TestComponents.TestWaypointComponents2} />
           <Route path={`/${testURL}/waypointcomponents`} component={TestComponents.TestWaypointComponents} />

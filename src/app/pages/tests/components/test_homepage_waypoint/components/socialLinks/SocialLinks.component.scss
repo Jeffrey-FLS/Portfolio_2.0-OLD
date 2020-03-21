@@ -1,0 +1,215 @@
+/**
+* Example of property order and category naming convention for comment
+********************************************************************************
+* .class {
+*  //------------------------- Font & Text
+*    text-align: val;
+*    text-shadow: val;
+*  //------------------------- Color & Background
+*    background-color: val;
+*    color: val;
+*    opacity: val;
+*  //------------------------- Box
+*    height: val;
+*    width: val;
+*    border-radius: val;
+*  //------------------------- Positioning
+*    position: absolute;
+*    bottom: 0;
+*  //------------------------- List
+*    property: val;
+*  //------------------------- Table
+*    property: val;
+*  //------------------------- Miscellaneous
+*    property: val;
+*  //------------------------- Effect
+*    property: val;
+* }
+*/
+
+// Imports ---------------------------------------------------------------------
+//@import './../../../styles/_palette.scss';
+
+
+/*******************************************************************************
+* Default |
+*********/
+
+.social {
+  color: white;
+  //background-color: pink;
+  position: relative;
+  display: block;
+  //position: absolute;
+  //bottom: 0;
+  //left: 26px;
+  height: 310px;
+  //display: inline-block;
+  //text-align: center;
+  //padding: 10px;
+  width: 50px;
+  //padding: 0;
+  //margin: 0;
+}
+
+.social_-_links {
+ //background-color: gray;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  //padding: 0;
+  //margin: 0;
+  //margin-top: 0;
+  //padding-top: 0;
+}
+
+.social_-_links_--_link {
+  font-size: 1.5rem;
+  //display: block;
+  margin: 5px 0;
+  //padding: 15px 0;
+  //text-align: center !important;
+  display: inline-block;
+  position: relative;
+  //background-color: red;
+  padding: 5px;
+  cursor: pointer;
+
+  &::after {
+    content:'';
+    position: absolute;
+    border: 2px solid white;
+    height: 2.5rem;
+    width: 2.5rem;
+    left: -3px;
+    bottom: 2px;
+    border-radius: 25px;
+    transform: scale(0);
+  }
+}
+
+.social_-_links_--_link h6 {
+  //background-color: red;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.social_-_title {
+  //background-color: red;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  //left: -10px;
+  margin: 0 auto;
+  width: inherit;
+//margin-top: -5px;
+  padding-top: 8px;
+  //line-height: 0;
+  //width: 100%;
+  //padding: 0;
+  //margin: 0;
+  //display: block;
+  transform: rotate(-90deg);
+  //margin-bottom: -100px;
+  //position: absolute;
+  //bottom: 0;
+
+  h6 {
+    //background-color: blue;
+    white-space: nowrap;
+    //padding: 0;
+    //margin: 0;
+    //text-align: left;
+    //width: 100%;
+    //display: block;
+    //line-height: 1rem;
+    //font-size: 3rem;
+  }
+}
+
+
+
+
+
+// Animation ----------------------------------------------------------------------
+
+$transitionDuration: 250ms; // Local Varible
+
+.social_-_links_--_link,
+.social_-_links_--_link:hover {
+  h6 {
+    transition-property: opacity, left;
+    transition-duration: $transitionDuration;
+    transition-timing-function: ease-in-out;
+  }
+
+  &::after{
+    //transition-property: opacity, left, transform;
+    //transition-duration: 300ms;
+    //transition-timing-function: ease-in-out;
+    transition: transform $transitionDuration ease-in-out;
+  }
+}
+
+// Active ----------------------------------------------------------------------
+
+// Hover -----------------------------------------------------------------------
+
+.social_-_links_--_link:hover {
+  h6 {
+    left: 50px;
+    opacity: 1;
+  }
+
+  &::after {
+    transform: scale(1);
+  }
+}
+
+
+// Layouts ---------------------------------------------------------------------
+
+// Media Sizes -----------------------------------------------------------------
+
+
+/*******************************************************************************
+* XS |
+****/
+
+//@include mq('xs') {
+//
+//}
+
+
+/*******************************************************************************
+* SM |
+****/
+
+//@include mq('sm') {
+//
+//}
+
+
+/*******************************************************************************
+* MD |
+****/
+
+//@include mq('md') {
+//
+//}
+
+
+/*******************************************************************************
+* LG |
+****/
+
+//@include mq('lg') {
+//
+//}
+
