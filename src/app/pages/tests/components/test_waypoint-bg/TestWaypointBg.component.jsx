@@ -1,5 +1,5 @@
 // React Components
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Assets
 import "./TestWaypointBg.component.scss";
@@ -26,11 +26,17 @@ const TestWaypointBg = props => {
   //   return () => window.removeEventListener(onScroll);
   // }, []);
 
+  useEffect(() => {
+    // Update the document title using the browser API
+    // document.title = `You clicked ${count} times`;
+    // document.body.style.backgroundColor = "blue"
+  });
+
   const renderSections = num => {
     let arr = new Array(num);
 
     for (let i = 0; i < num; i++) {
-      arr[i] = `section-${i + 1}`;
+      arr[i] = `zection-${i + 1}`;
     }
 
     return arr;
@@ -51,9 +57,13 @@ const TestWaypointBg = props => {
 
   return (
     <div className="test-onscroll">
-      <Helmet>
+      <Helmet bodyAttributes={{style: `background-color : ${randColorGenerator()}`}}/>
+
+      {/* <Helmet>
         <style>{`body { background-color: ${backgroundColor}; }`}</style>
-      </Helmet>
+      </Helmet> */}
+
+      
 
       <main>
         {renderSections(numOfSections).map(ele => (
@@ -64,7 +74,7 @@ const TestWaypointBg = props => {
             <div
               id={ele}
               // ref={myElement}
-              style={{ backgroundColor: randColorGenerator() }}
+              // style={{ backgroundColor: randColorGenerator() }}
             >
               <h1>{ele}</h1>
             </div>

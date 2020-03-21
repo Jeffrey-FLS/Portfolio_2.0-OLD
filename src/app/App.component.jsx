@@ -89,7 +89,7 @@ function App() {
           <Route path="/tests/components" component={TestPage.TestSMComponents} />
           <Route path="/tests" component={TestPage.TestHomePage} /> */}
           <Route path="/tests" component={TestsPage} />
-          <Route path="/" component={HomePage} />
+          <Route path="/" exact component={HomePage} />
         </Switch>
       </main>
 
