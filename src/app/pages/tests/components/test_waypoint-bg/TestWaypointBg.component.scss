@@ -28,91 +28,99 @@
 */
 
 // Imports ---------------------------------------------------------------------
-// @import './../styles/_palette.scss';
-@import '../styles/palette';
+// @import './../../../styles/_palette.scss';
+@import 'styles/palette';
+
+body {
+  transition: background 1s ease;
+}
+
+.test-onscroll {
+  // background-color:yellow;
+  display: block;
+  // margin: 10% auto;
+}
+
+[id^="section"] {
+  background:#282c34;
+  height: 100vh;
+  text-align: center;
+
+  h1 {
+  line-height: 100vh;
+  }
+}
+
+.dot-nav {
+  position: fixed;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  background-color: blue;
+  height: 50%;
+  text-align: center;
+
+
+  ul {
+    text-align: center;
+    padding: 0;
+  }
+
+  li {
+    background-color: green;
+    height: 25px;
+    width: 25px;
+    list-style: none;
+    // text-align: left;
+
+    // text-align: center;
+    // padding: 5px;
+    margin: 5px;
+    border-radius: 25px;
+    // display: inline;
+
+    &:hover {
+      background-color: lightgreen;
+
+      h1 {
+        opacity: 1;
+      }
+    }
+  }
+
+  h1 {
+    // display: inline-block;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    // top: 0;
+    background-color: pink;
+  }
+
+
+  // height: 
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 
 /*******************************************************************************
 * Default |
 *********/
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  transition: background 1s ease !important;
-  background: #3498db;
-}
-
-.App {
-  display: block;
-  position: relative;
-  // background-color: navy;
-  //padding: 15px;
-
-  //&::before {
-  //  content: '';
-  //  position: absolute;
-  //  background-color: red;
-  //  height: 100%;
-  //  width: 100%;
-  //  margin: 5px;
-  //  //margin: 15px;
-  //  display: inline-block;
-  //  //z-index: 10;
-  //}
-}
-
-.app_-_main {
-  display: block;
-}
-
-.app_-_main_--_section {
-  margin: 150px 0;
-  // background-color: blue;
-  height: auto;
-  width: inherit;
-  //padding: 150px 0;
-}
-
-.app_-_footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+//body {
+//  background-color: $palette-shady-white;
+//}
 
 
-// Special Classes -------------------------------------------------------------
-.icon-detail {
-  // background-color: lime;
-  padding: 10px;
-  width: 100px;
-  //display: inline-block;
-  text-align: center;
-}
 
-.icon-detail_-_icon {
-  height: 2rem;
-}
 
-.icon-detail_-_icon img {
-  //width: 100%;
-  height: inherit;
-  color: white;
 
-  // This turns the icon white
-  filter: invert(100%) sepia(2%) saturate(77%) hue-rotate(23deg) brightness(115%) contrast(100%);
-  //padding: 0;
-  //margin: 0;
-  //display: inline;
-  //position: relative;
-  //line-height: 0;
-
-}
-
-// Animation -------------------------------------------------------------------
+// Animation ----------------------------------------------------------------------
 
 // Active ----------------------------------------------------------------------
 

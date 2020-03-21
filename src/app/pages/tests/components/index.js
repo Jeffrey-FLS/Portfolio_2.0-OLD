@@ -8,6 +8,7 @@ import TestOnScroll from './test_onscroll/TestOnScroll.component';
 import TestWaypoint from './test_waypoint/TestWaypoint.component';
 import TestWaypointComponents from './test_waypoint-components/TestWaypointComponents.component';
 import TestWaypointComponents2 from './test_waypoint-components2/TestWaypointComponents2.component';
+import TestWaypointBg from './test_waypoint-bg/TestWaypointBg.component';
 
 /** @type {any} */
 const TestComponents = {
@@ -19,7 +20,8 @@ const TestComponents = {
     TestOnScroll,
     TestWaypoint,
     TestWaypointComponents,
-    TestWaypointComponents2
+    TestWaypointComponents2,
+    TestWaypointBg
 };
 
 export default TestComponents;

@@ -57,7 +57,7 @@ const TestWaypointComponents2 = props => {
     //   to: "white"
     // },
     section_1: {
-      from: "pink",
+      from: "white",
       to: "white"
     },
     section_2: {
@@ -66,18 +66,18 @@ const TestWaypointComponents2 = props => {
     },
     section_3: {
       from: "green",
-      to: "pink"
+      to: "green"
     },
     section_4: {
-      from: "pink",
-      to: "gray"
+      from: "green",
+      to: "blue"
     },
     section_5: {
-      from: "gray",
+      from: "blue",
       to: "blue"
     },
     section_6: {
-      from: "green",
+      from: "blue",
       to: "white"
     }
   };
@@ -106,7 +106,7 @@ const TestWaypointComponents2 = props => {
             //onEnter={() => handleWaypointEnter(ele)}
              //onLeave={() => handleWaypointLeave(ele)}
           //>
-            <Scene duration={duration} pin={false} indicators={true}>
+            <Scene duration={duration} pin={true} indicators={true}>
               {/* <Tween from={{ x: "100px", rotation: -360 }}> */}
               <Tween
                 from={tweenSettingsFrom(ele)}
