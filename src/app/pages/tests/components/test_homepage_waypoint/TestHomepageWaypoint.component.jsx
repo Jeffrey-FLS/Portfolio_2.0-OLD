@@ -8,8 +8,9 @@ import { Waypoint } from "react-waypoint";
 
 import { Helmet } from "react-helmet";
 
-const TestHomepageWaypoint = props => {
+import { SectionNav } from "./components";
 
+const TestHomepageWaypoint = props => {
   const [backgroundColor, setBackgroundColor] = useState("white");
 
   const numOfSections = 6;
@@ -56,28 +57,31 @@ const TestHomepageWaypoint = props => {
   // }
 
   return (
-    <div className="home-page">
+    <main className="home-page">
       <Helmet
-        bodyAttributes={{ style: `background-color : ${randColorGenerator()}` }}
+        bodyAttributes={{ style: `background-color : ${backgroundColor}` }}
       />
 
-      <main>
-        {renderSections(numOfSections).map(ele => (
-          <Waypoint
-            onEnter={() => handleWaypointEnter(ele)}
-            // onLeave={() => handleWaypointLeave(ele)}
+      <div className="home-page_-_section-nav">
+        <SectionNav/>
+      </div>
+
+
+      {renderSections(numOfSections).map(ele => (
+        <Waypoint
+          onEnter={() => handleWaypointEnter(ele)}
+          // onLeave={() => handleWaypointLeave(ele)}
+        >
+          <div
+            id={ele}
+            // ref={myElement}
+            // style={{ backgroundColor: randColorGenerator() }}
           >
-            <div
-              id={ele}
-              // ref={myElement}
-              // style={{ backgroundColor: randColorGenerator() }}
-            >
-              <h1>{ele}</h1>
-            </div>
-          </Waypoint>
-        ))}
-      </main>
-    </div>
+            <h1>{ele}</h1>
+          </div>
+        </Waypoint>
+      ))}
+    </main>
   );
 };
 

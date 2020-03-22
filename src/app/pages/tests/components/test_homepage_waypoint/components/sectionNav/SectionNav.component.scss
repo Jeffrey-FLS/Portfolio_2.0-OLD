@@ -28,104 +28,43 @@
 */
 
 // Imports ---------------------------------------------------------------------
-// @import './../../../styles/_palette.scss';
-@import "styles/palette";
+//@import './../../../styles/_palette.scss';
 
-body {
-  transition: background-color 0.5s ease;
-}
-
-.home-page {
-  // background-color:yellow;
-  display: block;
-  // margin: 10% auto;
-}
-
-.home-page_-_section-nav {
-  background-color: blue;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.home-page [id^="Section"] {
-  // background-color:blue;
-  height: 100vh;
-  text-align: center;
-
-  h1 {
-    line-height: 100vh;
-  }
-}
-
-.dot-nav {
-  position: fixed;
-  top: 25%;
-  right: 0;
-  bottom: 0;
-  display: inline-block;
-  background-color: blue;
-  height: 50%;
-  text-align: center;
-
-  ul {
-    text-align: center;
-    padding: 0;
-  }
-
-  li {
-    background-color: green;
-    height: 25px;
-    width: 25px;
-    list-style: none;
-    // text-align: left;
-
-    // text-align: center;
-    // padding: 5px;
-    margin: 5px;
-    border-radius: 25px;
-    // display: inline;
-
-    &:hover {
-      background-color: lightgreen;
-
-      h1 {
-        opacity: 1;
-      }
-    }
-  }
-
-  h1 {
-    // display: inline-block;
-    opacity: 1;
-    position: absolute;
-    right: 0;
-    text-align: left;
-    // top: 0;
-    background-color: pink;
-  }
-
-  // height:
-}
-
-html {
-  scroll-behavior: smooth;
-}
 
 /*******************************************************************************
 * Default |
 *********/
 
-//body {
-//  background-color: $palette-shady-white;
-//}
+.section-nav {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  display: block;
+}
 
-// Animation ----------------------------------------------------------------------
+.section-nav_-_active {
+  background-color: yellow;
+  height: 50%;
+}
+
+.section-nav_-_active_--_scroll {
+  background-color: pink;
+}
+
+.section-nav_--_scroll_---_line {
+  background-color: gray;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  margin: 3px 0;
+}
+
+
+// Special Classes -------------------------------------------------------------
+.line-active {
+
+}
+// Animation -------------------------------------------------------------------
 
 // Active ----------------------------------------------------------------------
 
@@ -135,6 +74,7 @@ html {
 
 // Media Sizes -----------------------------------------------------------------
 
+
 /*******************************************************************************
 * XS |
 ****/
@@ -142,6 +82,7 @@ html {
 //@include mq('xs') {
 //
 //}
+
 
 /*******************************************************************************
 * SM |
@@ -151,6 +92,7 @@ html {
 //
 //}
 
+
 /*******************************************************************************
 * MD |
 ****/
@@ -159,6 +101,7 @@ html {
 //
 //}
 
+
 /*******************************************************************************
 * LG |
 ****/
@@ -166,3 +109,4 @@ html {
 //@include mq('lg') {
 //
 //}
+

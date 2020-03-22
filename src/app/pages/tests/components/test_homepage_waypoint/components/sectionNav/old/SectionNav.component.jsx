@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Assets
-import './SocialLinks.component.scss';
+import './SectionNav.component.scss';
 
 import {
     FaFacebookF,
@@ -20,7 +20,7 @@ const iconMapper = {
     Facebook: <FaFacebookF/>
 };
 
-const SocialLinks = () => {
+const SectionNav = () => {
     return (
         <div className="social">
             <div className="social_-_links">
@@ -45,4 +45,4 @@ const SocialLinks = () => {
     );
 };
 
-export default SocialLinks;
+export default SectionNav;
