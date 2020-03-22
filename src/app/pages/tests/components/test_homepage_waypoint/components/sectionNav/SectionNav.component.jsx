@@ -21,15 +21,18 @@ const SectionNav = props => {
   };
 
   const renderSections = (intSections, arrStrSections) => {
-    const className = "section-nav_--_scroll_---_line";
-    let arrDivSections = [];
+    const className = "line_";
+    let objSections = {};
 
     if (intSections) {
       for (let i = 0; i < intSections; i++) {
-        arrDivSections.push(<div className={className} />);
+        objSections[className + i] = {
+          index: i,
+          name: className + i
+        }
       }
     } else if (arrStrSections) {
-      arrDivSections = arrStrSections.map(strSection => (
+      objSections = arrStrSections.map(strSection => (
         <div className={className}>
           <h3>{strSection}</h3>
         </div>
@@ -38,7 +41,9 @@ const SectionNav = props => {
       console.warn('intSections or arrStrSections value does not exist');
     }
 
-    return arrDivSections;
+    // alert(JSON.stringify(objSections));
+
+    return objSections;
   };
 
   // const renderSections = (intSections, arrStrSections) => {
@@ -76,7 +81,12 @@ const SectionNav = props => {
     <nav className="section-nav">
       <div className="section-nav_-_active">
         <div className="section-nav_-_active_--_scroll">
-          {renderSections(numOfSections, listOfSections)}
+          {/* {renderSections(numOfSections, listOfSections)} */}
+
+          {
+            {/* for */}
+          }
+
         </div>
       </div>
     </nav>
