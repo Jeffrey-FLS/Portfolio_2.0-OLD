@@ -7,7 +7,7 @@ import "./SectionNav.component.scss";
 
 const SectionNav = props => {
   // const { numOfSections, listOfSections } = props;
-  const [sections, setSections] = useState();
+  const [sections, setSections] = useState({});
   const [currentSection, setCurrentSection] = useState(null);
 
   const numOfSections = 6;
@@ -33,6 +33,7 @@ const SectionNav = props => {
 
   const populateSections = arrStrSections => {
     let objSections = { section: new Array(arrStrSections.length) };
+    // let objSections = { section:[] };
 
     arrStrSections.forEach(
       (strSection, index) =>
@@ -47,7 +48,10 @@ const SectionNav = props => {
         })
     );
 
-    setSections(objSections);
+    // alert(JSON.stringify(objSections));
+        return objSections;
+    // setSections(objSections);
+    // alert(JSON.stringify(sections));
   };
 
   useEffect(() => {
@@ -55,10 +59,13 @@ const SectionNav = props => {
       ? convertNumOfSectionsList(numOfSections)
       : listOfSections;
 
-    populateSections(sectionList);
+    const populatedSections = populateSections(sectionList);
+
+    setSections(populatedSections);
 
     alert(JSON.stringify(sections));
-  }, []);
+
+  },[]);
 
   // const renderSections = (intSections, arrStrSections) => {
   //   const className = "line_";
@@ -135,7 +142,7 @@ const SectionNav = props => {
     <nav className="section-nav">
       <div className="section-nav_-_active">
         <div className="section-nav_-_active_--_scroll">
-          {/* {sections.section.map(sec => sec.element)} */}
+          {sections.section.map(sec => sec.element)}
         </div>
       </div>
     </nav>
