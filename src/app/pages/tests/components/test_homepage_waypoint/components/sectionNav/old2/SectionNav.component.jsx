@@ -7,7 +7,7 @@ import "./SectionNav.component.scss";
 
 const SectionNav = props => {
   // const { numOfSections, listOfSections } = props;
-  const [sections, setSections] = useState(null);
+  const [sections, setSections] = useState({});
   const [currentSection, setCurrentSection] = useState(null);
 
   const numOfSections = 6;
@@ -31,11 +31,6 @@ const SectionNav = props => {
     return arr;
   };
 
-  const sectionHandler = obj => {
-    setSections(obj);
-    alert(JSON.stringify(sections));
-  };
-
   const populateSections = arrStrSections => {
     let objSections = { section: new Array(arrStrSections.length) };
     // let objSections = { section:[] };
@@ -44,32 +39,25 @@ const SectionNav = props => {
       (strSection, index) =>
         (objSections.section[index] = {
           index: index,
-          name: strSection
+          name: strSection,
+          element: (
+            <div className={"line_" + strSection}>
+              <h3>{strSection}</h3>
+            </div>
+          )
         })
     );
 
-    sectionHandler(objSections);
-
     // alert(JSON.stringify(objSections));
-    // return objSections;
+    return objSections;
     // setSections(objSections);
     // alert(JSON.stringify(sections));
   };
 
-
-  // arrStrSections.forEach(
-  //   (strSection, index) =>
-  //     (objSections.section[index] = {
-  //       index: index,
-  //       name: strSection,
-  //       elem: (
-  //         <div className={"line_" + strSection}>
-  //           <h3>{strSection}</h3>
-  //         </div>
-  //       )
-  //     })
-  // );
-  
+  const sectionHandler = obj => {
+    setSections(obj);
+    alert(JSON.stringify(sections));
+  };
 
   useEffect(() => {
     const sectionList = numOfSections
@@ -157,11 +145,9 @@ const SectionNav = props => {
     <nav className="section-nav">
       <div className="section-nav_-_active">
         <div className="section-nav_-_active_--_scroll">
-        {(sections) && <h1>{sections.section[1].name}</h1>}
-
         {/* {console.log({sections})} */}
           {/* {sections.section.map(sec => sec.element)} */}
-          {/* {zections.zection} */}
+          {zections.zection}
         </div>
       </div>
     </nav>
