@@ -18,7 +18,7 @@ const SectionNav = props => {
   // };
 
   // const populateSections = () => {
-  let zections = null;
+  // let zections = null;
   // };
 
   const convertNumOfSectionsList = num => {
@@ -33,7 +33,12 @@ const SectionNav = props => {
 
   const sectionHandler = obj => {
     setSections(obj);
-    alert(JSON.stringify(sections));
+    // alert(JSON.stringify(sections));
+  };
+
+  const currentSectionHandler = obj => {
+    setCurrentSection(obj);
+    // alert(JSON.stringify(sections));
   };
 
   const populateSections = arrStrSections => {
@@ -44,18 +49,22 @@ const SectionNav = props => {
       (strSection, index) =>
         (objSections.section[index] = {
           index: index,
-          name: strSection
+          name: strSection,
+          elem: (
+            <div className={strSection}>
+              <h3>{strSection}</h3>
+            </div>
+          )
         })
     );
 
-    sectionHandler(objSections);
+    // sectionHandler(objSections);
 
     // alert(JSON.stringify(objSections));
-    // return objSections;
+    return objSections;
     // setSections(objSections);
     // alert(JSON.stringify(sections));
   };
-
 
   // arrStrSections.forEach(
   //   (strSection, index) =>
@@ -69,7 +78,6 @@ const SectionNav = props => {
   //       )
   //     })
   // );
-  
 
   useEffect(() => {
     const sectionList = numOfSections
@@ -78,8 +86,8 @@ const SectionNav = props => {
 
     const populatedSections = populateSections(sectionList);
 
-    zections = populatedSections;
-    // sectionHandler(populatedSections);
+    sectionHandler(populatedSections);
+    currentSectionHandler(sections.section[0]);
   }, []);
 
   // const renderSections = (intSections, arrStrSections) => {
@@ -151,17 +159,27 @@ const SectionNav = props => {
   //   })
   // }
 
+  // const yScrollStyle = 
+
   // renderSections(numOfSections, listOfSections);
+  const renderSections = objSections => {
+    return objSections.section.map((sec, index) => (
+      <div key={index} id={"line_" + sec.name}>
+        <h3>{sec.name}</h3>
+      </div>
+    ));
+  };
+
+  const transformStyle = `translateX(-${((currentSection) && currentSection.index ) * (100 / ((sections) && sections.section.length))}%)`;
+  // const transformStyle = `-${currentSection.index * (100 / sections.section.length)}%`;
 
   return (
     <nav className="section-nav">
       <div className="section-nav_-_active">
-        <div className="section-nav_-_active_--_scroll">
-        {(sections) && <h1>{sections.section[1].name}</h1>}
-
-        {/* {console.log({sections})} */}
-          {/* {sections.section.map(sec => sec.element)} */}
-          {/* {zections.zection} */}
+        {/* <div className="section-nav_-_active_--_scroll"
+          style={{transform: (currentSection) && transformStyle}}> */}
+          <div className="section-nav_-_active_--_scroll">
+          {sections && renderSections(sections)}
         </div>
       </div>
     </nav>
