@@ -15,7 +15,43 @@ class SectionNav extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    // this.state = {
+      
+    // }
+  }
+
+  populateSectionList = num => {
+    let arr = new Array(num);
+
+    for (let i = 0; i < num; i++) {
+      arr[i] = "line_" + i;
+    }
+
+    return arr;
+  };
+
+  populateSections = arrStrSections => {
+    let objSections = { section: new Array(arrStrSections.length) };
+
+    arrStrSections.forEach(
+      (strSection, index) =>
+        (objSections.section[index] = {
+          index: index,
+          name: strSection
+        })
+    );
+
+    return objSections;
+  };
+
+  renderSections = objSections => {
+    return objSections.section.map((sec, index) => (
+      <div key={index} id={"line_" + sec.name}>
+        <h3>{sec.name}</h3>
+      </div>
+    ));
+  };
 
   render() {
     return (
@@ -23,6 +59,8 @@ class SectionNav extends Component {
         <div className="section-nav_-_active">
           <div className="section-nav_-_active_--_scroll">
             {/* {sections && renderSections(sections)} */}
+
+            {this.renderSections(this.populateSections(this.populateSectionList(8)))}
           </div>
         </div>
       </nav>
