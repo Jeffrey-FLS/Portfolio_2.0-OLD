@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 // Assets
 import "./SectionNav.component.scss";
 
+// Pushing to Git
 class SectionNav extends Component {
 
   constructor(props) {
