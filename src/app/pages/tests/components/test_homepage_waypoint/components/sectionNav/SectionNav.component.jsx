@@ -10,26 +10,51 @@ class SectionNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sectionsList: {},
+      sectionsList: [],
       currentSection: {}
     };
   }
 
   componentDidMount() {
+    this.state = {
+      sectionsList: this.populateSections(this.props.arrList),
+      currentSection: this.state.sectionsList[0]
+    }
+
     // this.state = {
       
     // }
   }
 
-  populateSectionList = num => {
-    let arr = new Array(num);
+  nextSection = () => {
+    const newIndex = this.state.currentSection.index + 1;
+    this.setState({
+      currentSection: this.state.sectionsList[newIndex]
+    })
+  }
 
-    for (let i = 0; i < num; i++) {
-      arr[i] = "line_" + i;
-    }
+  prevSection = () => {
+    const newIndex = this.state.currentSection.index - 1;
+    this.setState({
+      currentSection: this.state.sectionsList[newIndex]
+    })
+  }
 
-    return arr;
-  };
+  handleOnClickSectionChange = (newSection) => {
+    this.setState({
+      currentSection: this.state.sectionsList[newSection]
+    })
+  }
+
+  // populateSectionList = num => {
+  //   let arr = new Array(num);
+
+  //   for (let i = 0; i < num; i++) {
+  //     arr[i] = "line_" + i;
+  //   }
+
+  //   return arr;
+  // };
 
   populateSections = arrStrSections => {
     let objSections = { section: new Array(arrStrSections.length) };
@@ -47,7 +72,7 @@ class SectionNav extends Component {
 
   renderSections = objSections => {
     return objSections.section.map((sec, index) => (
-      <div key={index} id={"line_" + sec.name}>
+      <div key={index} id={"line_" + sec.name} onClick={() => this.handleOnClickSectionChange(this.state.currentSection.index)}>
         <h3>{sec.name}</h3>
       </div>
     ));
@@ -57,10 +82,12 @@ class SectionNav extends Component {
     return (
       <nav className="section-nav">
         <div className="section-nav_-_active">
-          <div className="section-nav_-_active_--_scroll">
+          <div className="section-nav_-_active_--_scroll" 
+            style={{'transform': `translateX(-${this.state.index*(100/this.state.sectionsList.length)}%)`}}>
             {/* {sections && renderSections(sections)} */}
 
-            {this.renderSections(this.populateSections(this.populateSectionList(8)))}
+            {this.renderSections(this.state.sectionsList)}
+            {/* {this.renderSections(this.populateSections(this.populateSectionList(8)))} */}
           </div>
         </div>
       </nav>

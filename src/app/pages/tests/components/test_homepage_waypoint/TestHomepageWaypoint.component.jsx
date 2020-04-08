@@ -52,6 +52,16 @@ const TestHomepageWaypoint = props => {
     // alert(`Entering ${ele}`);
   };
 
+  const populateSectionList = num => {
+    let arr = new Array(num);
+
+    for (let i = 0; i < num; i++) {
+      arr[i] = "line_" + i;
+    }
+
+    return arr;
+  };
+
   // const handleWaypointLeave = (ele) => {
   //   alert(`Exiting ${ele}`);
   // }
@@ -69,6 +79,8 @@ const TestHomepageWaypoint = props => {
 
       {renderSections(numOfSections).map(ele => (
         <Waypoint
+          arrList={() => populateSectionList(5)}
+
           onEnter={() => handleWaypointEnter(ele)}
           // onLeave={() => handleWaypointLeave(ele)}
         >
