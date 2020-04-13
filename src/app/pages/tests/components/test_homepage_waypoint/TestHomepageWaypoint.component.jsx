@@ -62,6 +62,7 @@ const TestHomepageWaypoint = props => {
     return arr;
   };
 
+  
   // const handleWaypointLeave = (ele) => {
   //   alert(`Exiting ${ele}`);
   // }
@@ -73,14 +74,11 @@ const TestHomepageWaypoint = props => {
       />
 
       <div className="home-page_-_section-nav">
-        <SectionNav/>
+        <SectionNav arrList={populateSectionList(5)}/>
       </div>
-
 
       {renderSections(numOfSections).map(ele => (
         <Waypoint
-          arrList={() => populateSectionList(5)}
-
           onEnter={() => handleWaypointEnter(ele)}
           // onLeave={() => handleWaypointLeave(ele)}
         >
