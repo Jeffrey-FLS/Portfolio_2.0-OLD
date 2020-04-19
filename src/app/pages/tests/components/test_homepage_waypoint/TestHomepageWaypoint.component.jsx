@@ -1,6 +1,8 @@
 // React Components
 import React, { useState, useEffect } from "react";
 
+// Pushing to Git
+
 // Assets
 import "./TestHomepageWaypoint.component.scss";
 
