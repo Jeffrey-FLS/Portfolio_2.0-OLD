@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 
-// Pushing to Git
-
 // Assets
 import "./SectionNav.component.scss";
 class SectionNav extends Component {
