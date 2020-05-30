@@ -9,6 +9,8 @@ import { Waypoint } from "react-waypoint";
 import {Helmet} from "react-helmet";
 
 
+// Committing message
+
 const TestWaypointBg = props => {
   const [backgroundColor, setBackgroundColor] = useState("white");
 
