@@ -1,5 +1,5 @@
 // React Components
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useRef} from 'react';
 
 // Assets
 import './Header.component.scss';

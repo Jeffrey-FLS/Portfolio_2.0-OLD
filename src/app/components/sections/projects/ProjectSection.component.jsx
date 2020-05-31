@@ -52,7 +52,7 @@ const ProjectSection = () => {
     };
 
     const jsxIconDetailRender = (arrIcons) => {
-        return arrIcons.map(icon => <div className="icon-detail">
+        return arrIcons.map((icon, index) => <div className="icon-detail" key={index}>
             <div className="icon-detail_-_icon">
                 {icons[spaceUnderscore(icon).toLowerCase()]}
             </div>

@@ -1,5 +1,5 @@
 // React Components
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 // Assets
 import "./TestWaypoint.component.scss";

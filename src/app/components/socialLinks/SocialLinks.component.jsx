@@ -25,9 +25,9 @@ const SocialLinks = () => {
         <div className="social">
             <div className="social_-_links">
                 {
-                    data.socialLinks.map((socialLink, key) => {
+                    data.socialLinks.map((socialLink, index) => {
                         return(
-                            <div className="social_-_links_--_link">
+                            <div className="social_-_links_--_link" key={index}>
                                 <a href={socialLink.link}>
                                     {iconMapper[socialLink.name]}
                                     <h6>{socialLink.name}</h6>
