@@ -36,7 +36,7 @@ const HomePage = () => {
       <div className="app_-_main container">
         {sections.map((section, index) => {
           return (
-            <div className="row" key={index} >
+            <div className="row" key={index}>
               <div className="app_-_main_--_section col-12">{section}</div>
             </div>
           );
