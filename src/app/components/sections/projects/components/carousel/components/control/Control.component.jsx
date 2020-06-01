@@ -1,5 +1,6 @@
 // React Components
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from 'react';
 
 import ProgressBar from "./components/progress/components/progress_bar/ProgressBar.component";
 
@@ -25,6 +26,8 @@ import {
 
 const Control = props => {
 
+  const [isAnimated, setIsAnimated] = useState(false);
+  
    const {count, amount} = props;
 
 
