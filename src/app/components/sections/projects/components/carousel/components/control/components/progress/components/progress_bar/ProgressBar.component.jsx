@@ -9,9 +9,14 @@ import './ProgressBar.component.scss';
 
 const ProgressBar = (props) => {
 
-    const [isAnimated, setIsAnimated] = useState(true);
+    const [isAnimated, setIsAnimated] = useState(props.animate);
 
     const duration = "10" + "s";
+
+    useEffect(() => {
+       setIsAnimated(props.animate)
+    });
+
 
     return (
         <div className="progress-bar">

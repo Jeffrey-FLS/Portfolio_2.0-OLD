@@ -26,9 +26,29 @@ import {
 
 const Control = props => {
 
-  const [isAnimated, setIsAnimated] = useState(false);
+  const [animateChange, setAnimateChange] = useState(true);
   
-   const {count, amount} = props;
+  const {count, amount} = props;
+
+  const animateTimerDelay = () => {
+    setInterval(() => setAnimateChange(true)
+    , 1000);
+  }
+
+  const handleClickNext = () => {
+    setAnimateChange(false);
+    animateTimerDelay();
+    // setAnimateChange(true);
+    
+    // alert("HELLO");
+  };
+
+  const handleClickPrevious = () => {
+    setAnimateChange(false);
+    animateTimerDelay();
+
+    // setAnimateChange(true);
+  };
 
 
   return (
@@ -36,14 +56,15 @@ const Control = props => {
       <div className="control_-_progress">
         <h4>0{count}</h4>
         <div className="control_-_progress_--_progress-bar">
-          <ProgressBar progress={30} />
+          <ProgressBar animate={animateChange} />
+          {/* <ProgressBar progress={30} /> */}
         </div>
         <h4>0{amount}</h4>
       </div>
 
       <div className="control_-_navigation">
         <div className="control_-_navigation_--_next"
-            onClick={() => props.handleClickNext()}>
+            onClick={() => handleClickNext()}>
           <FontAwesomeIcon
             icon={faChevronCircleUp}
             className="control_-_navigation_--_next--icon"
@@ -51,7 +72,7 @@ const Control = props => {
           />
         </div>
         <div className="control_-_navigation_--_previous" 
-            onClick={() => props.handleClickPrevious()}>
+            onClick={() => handleClickPrevious()}>
           <FontAwesomeIcon
             icon={faChevronCircleDown}
             className="control_-_navigation_--_previous--icon"

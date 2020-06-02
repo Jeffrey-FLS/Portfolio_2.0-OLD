@@ -109,8 +109,6 @@
   cursor: pointer;
   padding: 5px 0;
   color: #fafafa;
-
-
 }
 
 
@@ -121,6 +119,12 @@
 // Active ----------------------------------------------------------------------
 
 // Hover -----------------------------------------------------------------------
+
+.control_-_navigation_--_next--icon:hover,
+.control_-_navigation_--_previous--icon:hover {
+  color: black;
+  // background-color: rgba(#fafafa,1);
+}
 
 // Layouts ---------------------------------------------------------------------
 
