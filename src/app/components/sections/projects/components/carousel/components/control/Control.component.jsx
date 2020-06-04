@@ -56,7 +56,7 @@ const Control = props => {
       <div className="control_-_progress">
         <h4>0{count}</h4>
         <div className="control_-_progress_--_progress-bar">
-          <ProgressBar animate={animateChange} />
+          <ProgressBar isAnimation={animateChange} progressDuration={10}/>
           {/* <ProgressBar progress={30} /> */}
         </div>
         <h4>0{amount}</h4>

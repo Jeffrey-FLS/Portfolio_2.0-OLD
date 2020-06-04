@@ -1,5 +1,5 @@
 // React Components
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Assets
 import './Carousel.component.scss';
@@ -13,13 +13,40 @@ import {Control} from "./components";
  * @param {{ projects: { images: any[]; }; }} props
  */
 const Carousel = (props) => {
-    const image = props.projects.images[0];
+    // const image = props.projects.images[0];
     // const images = props.projects.images;
 
+    const arrImageLength = props.projects.images.length;
+
     const [count, setCount] = useState(1);
-    const [amount, setAmount] = useState(5);
+    const [amount, setAmount] = useState(arrImageLength);
+
+    const [currentImage, setCurrentImage] = useState(props.projects.images[0]);
 
 
+ 
+
+    const rotateImage = () => {
+        while(true) {
+            for(let i = 0; i < arrImageLength; i++) {
+                setInterval(() => {
+                    setCurrentImage(props.projects.images[i])
+                }, 1000)
+            }    
+        }
+    };
+
+    useEffect(() => {
+        const interval = (() => {
+            rotateImage();
+        });
+
+        return () => {
+            clearInterval(interval);
+          };
+        // rotateImage();
+        // clearInterval(rotateImage(arrImageLength));
+     }, []);
 
     // const handleClickNextSlide = () => {
 
@@ -32,7 +59,7 @@ const Carousel = (props) => {
     return (
         <div className="carousel">
             <div className="carousel_-_media">
-                <img src={images.tabpik[image]} alt={image}/>
+                <img src={images.tabpik[currentImage]} alt={currentImage}/>
                 <div className="carousel_-_media_--_control">
                     <Control count={count} amount={amount}/>
                 </div>
