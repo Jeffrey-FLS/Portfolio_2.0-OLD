@@ -6,7 +6,7 @@ import './Carousel.component.scss';
 
 // import images from "assets/images";
 import images from "assets/images";
-import {Control} from "./components";
+import {Control, Timer} from "./components";
 // import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
 
 /**
@@ -36,11 +36,13 @@ const Carousel = (props) => {
         }
     };
 
-    const timer = () => {
+    // const timer = () => {
         
-    }
+    // }
 
     useEffect(() => {
+        // Timer.toggle;
+
         const interval = (() => {
             rotateImage();
         });
@@ -67,13 +69,12 @@ const Carousel = (props) => {
                 <div className="carousel_-_media_--_control">
                     <Control count={count} amount={amount}/>
                 </div>
-                <div className="carousel_-_media_--_nav">
-                </div>
+                <div className="carousel_-_media_--_nav"/>
             </div>
 
-            <div className="carousel_-_nav">
+            <div className="carousel_-_nav"/>
 
-            </div>
+            <h1>{Timer.seconds}</h1>
         </div>
     );
 };
