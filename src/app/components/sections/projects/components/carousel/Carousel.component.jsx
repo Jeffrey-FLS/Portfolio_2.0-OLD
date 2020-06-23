@@ -36,6 +36,10 @@ const Carousel = (props) => {
         }
     };
 
+    const timer = () => {
+        
+    }
+
     useEffect(() => {
         const interval = (() => {
             rotateImage();
