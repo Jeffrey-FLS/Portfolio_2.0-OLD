@@ -1,0 +1,116 @@
+/**
+* Example of property order and category naming convention for comment
+********************************************************************************
+* .class {
+*  //------------------------- Font & Text
+*    text-align: val;
+*    text-shadow: val;
+*  //------------------------- Color & Background
+*    background-color: val;
+*    color: val;
+*    opacity: val;
+*  //------------------------- Box
+*    height: val;
+*    width: val;
+*    border-radius: val;
+*  //------------------------- Positioning
+*    position: absolute;
+*    bottom: 0;
+*  //------------------------- List
+*    property: val;
+*  //------------------------- Table
+*    property: val;
+*  //------------------------- Miscellaneous
+*    property: val;
+*  //------------------------- Effect
+*    property: val;
+* }
+*/
+
+// Imports ---------------------------------------------------------------------
+//@import './../../../styles/_palette.scss';
+
+
+/*******************************************************************************
+* Default |
+*********/
+
+.progress-bar {
+  background-color:#212121;
+  display: block;
+  position: relative;
+  height: 5px;
+  min-width: 100px;
+  width: 200px;
+}
+
+.progress-bar_-_bar {
+  background-color:#fafafa;
+  width: inherit;
+  height: inherit;
+  //width: 50%;
+}
+
+
+
+
+// Animation ----------------------------------------------------------------------
+
+@keyframes progress-animation {
+  from {width: 0;}
+  to {width: 100%}
+}
+ 
+.progress-bar_-_bar {
+  animation-name: progress-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  // animation-delay: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+}
+
+// Active ----------------------------------------------------------------------
+
+// Hover -----------------------------------------------------------------------
+
+// Layouts ---------------------------------------------------------------------
+
+// Media Sizes -----------------------------------------------------------------
+
+
+/*******************************************************************************
+* XS |
+****/
+
+//@include mq('xs') {
+//
+//}
+
+
+/*******************************************************************************
+* SM |
+****/
+
+//@include mq('sm') {
+//
+//}
+
+
+/*******************************************************************************
+* MD |
+****/
+
+//@include mq('md') {
+//
+//}
+
+
+/*******************************************************************************
+* LG |
+****/
+
+//@include mq('lg') {
+//
+//}
+
