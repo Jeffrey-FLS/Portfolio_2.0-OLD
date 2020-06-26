@@ -2,8 +2,8 @@
 // import React from "react";
 import React, { useState, useEffect } from 'react';
 
-// import ProgressBar from "./components/progress_bar/ProgressBar.component";
-import { TestProgressBar } from './components';
+import { ProgressBar } from "./components";
+// import { TestProgressBar } from './components';
 
 // Assets
 import "./Control.component.scss";
@@ -27,7 +27,7 @@ import {
 
 const Control = props => {
 
-  const [animateChange, setAnimateChange] = useState(true);
+  const [animateChange, setAnimateChange] = useState(props.timerState);
   
   const {count, amount} = props;
 
@@ -51,14 +51,18 @@ const Control = props => {
     // setAnimateChange(true);
   };
 
+  useEffect(() => {
+    setAnimateChange(props.timerState)
+  }, [props.timerState]);
+
 
   return (
     <div className="control">
       <div className="control_-_progress">
         <h4>0{count}</h4>
         <div className="control_-_progress_--_progress-bar">
-          {/* <ProgressBar isAnimation={animateChange} progressDuration={10}/> */}
-          <TestProgressBar isAnimation={props.isTimerActive} progressDuration={10}/>
+          <ProgressBar isAnimation={animateChange} progressDuration={10}/>
+          {/* <TestProgressBar isAnimation={props.isTimerActive} progressDuration={10}/> */}
           {/* <ProgressBar progress={30} /> */}
         </div>
         <h4>0{amount}</h4>

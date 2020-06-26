@@ -21,13 +21,15 @@ const Carousel = (props) => {
   const [count, setCount] = useState(1);
   const [amount, setAmount] = useState(arrImageLength);
 
-  const [currentImage, setCurrentImage] = useState(props.projects.images[0]);
+  const [currentProject, setCurrentProject] = useState(props.projects[0]);
+  const [currentImage, setCurrentImage] = useState(props.projects[0].images[0]);
 
   /* TIMER TEST *************************************************************/
 
+  const timerInit = 1;
   const timerLimit = 10;
 
-  const [timerSeconds, setTimerSeconds] = useState(0);
+  const [timerSeconds, setTimerSeconds] = useState(timerInit);
   const [isTimerActive, setIsTimerActive] = useState(true);
 
   const timerToggle = () => {
@@ -35,13 +37,31 @@ const Carousel = (props) => {
   };
 
   const timerReset = () => {
-    setTimerSeconds(0);
+    setTimerSeconds(timerInit);
     setIsTimerActive(false);
   };
 
   /* END TEST ***************************************************************/
 
+  // const rotateImage = () => {
+  //   while (true) {
+  //     for (let i = 0; i < arrImageLength; i++) {
+  //       setInterval(() => {
+  //         setCurrentImage(props.projects.images[i]);
+  //       }, 1000);
+  //     }
+  //   }
+  // };
+
   const rotateImage = () => {
+    const imageListLength = props.projects.images.length;
+
+    if (currentImage === props.projects.images[imageListLength]) {
+      setCurrentImage(props.projects.images[0]);
+    } else {
+      setCurrentImage(props.projects.images[0]);
+    }
+
     while (true) {
       for (let i = 0; i < arrImageLength; i++) {
         setInterval(() => {
@@ -54,13 +74,14 @@ const Carousel = (props) => {
   useEffect(() => {
     let interval = null;
 
-    if (timerSeconds > timerLimit) {
-      setTimerSeconds(0);
+    if (timerSeconds >= timerLimit) {
+      timerToggle();
+      // setTimerSeconds(1);
     } else if (isTimerActive) {
       interval = setInterval(() => {
         setTimerSeconds((timerSeconds) => timerSeconds + 1);
       }, 1000);
-    } else if (!isTimerActive && timerSeconds !== 0) {
+    } else if (!isTimerActive && timerSeconds !== timerInit) {
       clearInterval(interval);
     }
 
@@ -83,7 +104,7 @@ const Carousel = (props) => {
           <Control
             count={count}
             amount={amount}
-            isTimerActive={isTimerActive}
+            timerState={isTimerActive}
           />
         </div>
         <div className="carousel_-_media_--_nav" />

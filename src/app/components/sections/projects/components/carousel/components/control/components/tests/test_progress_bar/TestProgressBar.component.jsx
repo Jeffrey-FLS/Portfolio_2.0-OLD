@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 // Assets
-import './TestProgressBar.component.scss';
+// import './TestProgressBar.component.scss';
 
 const TestProgressBar = (props) => {
 
@@ -28,12 +28,14 @@ const TestProgressBar = (props) => {
 
     return (
         <div className="progress-bar">
-            <div className={isAnimated ? "progress-bar_-_bar" :""}
+            
+            <CSSTransition className={isAnimated ? "progress-bar_-_bar" :""}
                 style={{animationDuration: `${duration}`}}
-            />
-
-            {/* <div className="progress-bar_-_bar"
-                style={{width: `${props.progress}%`}}/> */}
+            ><div></div></CSSTransition> 
+            
+            {/* <div className={isAnimated ? "progress-bar_-_bar" :""}
+                style={{animationDuration: `${duration}`}}
+            /> */}
         </div>
     );
 };
