@@ -3,11 +3,12 @@
 // import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
 
+import { CSSTransition } from 'react-transition-group';
 
 // Assets
-import './ProgressBar.component.scss';
+import './TestProgressBar.component.scss';
 
-const ProgressBar = (props) => {
+const TestProgressBar = (props) => {
 
     const {isAnimation, progressDuration} = props;
 
@@ -37,4 +38,4 @@ const ProgressBar = (props) => {
     );
 };
 
-export default ProgressBar;
+export default TestProgressBar;

@@ -1,7 +1,9 @@
-import Progress from "./progress/Progress.component";
+import ProgressBar from "./progress_bar/ProgressBar.component";
 import Navigation from "./navigation/Navigation.component";
+import TestProgressBar from './tests/test_progress_bar/TestProgressBar.component';
 
 export {
-    Progress,
-    Navigation
+    ProgressBar,
+    Navigation,
+    TestProgressBar
 }

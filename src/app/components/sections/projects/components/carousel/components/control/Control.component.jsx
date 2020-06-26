@@ -2,7 +2,8 @@
 // import React from "react";
 import React, { useState, useEffect } from 'react';
 
-import ProgressBar from "./components/progress/components/progress_bar/ProgressBar.component";
+// import ProgressBar from "./components/progress_bar/ProgressBar.component";
+import { TestProgressBar } from './components';
 
 // Assets
 import "./Control.component.scss";
@@ -57,7 +58,7 @@ const Control = props => {
         <h4>0{count}</h4>
         <div className="control_-_progress_--_progress-bar">
           {/* <ProgressBar isAnimation={animateChange} progressDuration={10}/> */}
-          <ProgressBar isAnimation={props.isTimerActive} progressDuration={10}/>
+          <TestProgressBar isAnimation={props.isTimerActive} progressDuration={10}/>
           {/* <ProgressBar progress={30} /> */}
         </div>
         <h4>0{amount}</h4>
