@@ -3,36 +3,36 @@
 
 const projects = [
     {
-        "name": "Tabpik",
-        "description": "Tabpik is a tab manager that lets you organize your tabs" +
+        name: "Tabpik",
+        description: "Tabpik is a tab manager that lets you organize your tabs" +
             " by topics, with the purpose of continuing the use of " +
             "those tabs across devices and for later use",
-        "languages": [
+        languages: [
             "Typescript",
             "Javascript",
             "HTML",
             // "Bash",
             "SCSS"
         ],
-        "technologies": [
+        technologies: [
             "Angular",
             "Chrome Extension API",
             "Angular Material",
             "RxJS"
         ],
-        "tools": [
+        tools: [
             "Chrome Developer Tools",
             "Zeplin",
             "Photoshop",
             "Webstorm"
             // "Ubuntu"
         ],
-        "images": [
+        images: [
           "tabpikOne",
           "tabpikTwo",
           "tabpikThree"
         ],
-        "link": "#"
+        link: "#"
     },
     // {
     //     name: "Codepen",
@@ -47,37 +47,37 @@ const projects = [
     //     link: "#"
     // }
     {
-        "name": "Chopsticks",
-        "description": "Tabpik is a tab manager that lets you organize your tabs" +
+        name: "WoW",
+        description: "Tabpik is a tab manager that lets you organize your tabs" +
             " by topics, with the purpose of continuing the use of " +
             "those tabs across devices and for later use",
-        "languages": [
+        languages: [
             "Typescript",
             "Javascript",
             "HTML",
             // "Bash",
             "SCSS"
         ],
-        "technologies": [
+        technologies: [
             "Angular",
             "Chrome Extension API",
             "Angular Material",
             "RxJS"
         ],
-        "tools": [
+        tools: [
             "Chrome Developer Tools",
             "Zeplin",
             "Photoshop",
             "Webstorm"
             // "Ubuntu"
         ],
-        "images": [
+        images: [
           "tabpikOne",
           "tabpikTwo",
           "tabpikThree"
         ],
-        "link": "#"
-    }
+        link: "#"
+    },
 ];
 
 export default projects;

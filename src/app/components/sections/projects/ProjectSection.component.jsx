@@ -1,5 +1,5 @@
 // React Components
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
 // Assets
 import './ProjectSection.component.scss';
@@ -39,8 +39,10 @@ import {Carousel} from "./components";
 
 const ProjectSection = () => {
 
-    const project = data.projects[0];
+    // const project = data.projects[0];
     const icons = assets.icons;
+
+    const [project, setProject] = useState(data.projects[0]);
 
     // const removeSpaces = (strVal) => {
     //     return strVal.split('');
