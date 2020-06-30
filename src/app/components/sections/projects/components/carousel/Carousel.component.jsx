@@ -16,13 +16,14 @@ const Carousel = (props) => {
   // const image = props.projects.images[0];
   // const images = props.projects.images;
 
-  const arrImageLength = props.projects.images.length;
+  const arrImageLength = props.projectImages.length;
+
+  const defaultImage = {id: 0, image: props.projectImages[0]};
 
   const [count, setCount] = useState(1);
   const [amount, setAmount] = useState(arrImageLength);
 
-  // const [currentProject, setCurrentProject] = useState(props.projects.name);
-  const [currentImage, setCurrentImage] = useState(props.projects.images[0]);
+  const [currentImage, setCurrentImage] = useState(defaultImage);
 
   /* TIMER TEST *************************************************************/
 
@@ -54,20 +55,14 @@ const Carousel = (props) => {
   // };
 
   const rotateImage = () => {
-    const imageListLength = props.projects.images.length;
+    // const imageListLength = props.projectImages.length;
+    const imageListLength = arrImageLength;
 
-    if (currentImage === props.projects.images[imageListLength]) {
-      setCurrentImage(props.projects.images[0]);
-    } else {
-      setCurrentImage(props.projects.images[0]);
-    }
-
-    while (true) {
-      for (let i = 0; i < arrImageLength; i++) {
-        setInterval(() => {
-          setCurrentImage(props.projects.images[i]);
-        }, 1000);
-      }
+    if (currentImage.id >= imageListLength) {
+      setCurrentImage(defaultImage);
+    } else if (currentImage.id < imageListLength) {
+      const newId = currentImage.id + 1;
+      setCurrentImage({id: newId, image: props.projectImages[newId]})
     }
   };
 
@@ -76,6 +71,20 @@ const Carousel = (props) => {
 
     if (timerSeconds >= timerLimit) {
       timerToggle();
+      timerReset();
+      rotateImage();
+
+
+      interval = setInterval(() => {
+        setTimerSeconds(() => timerToggle());
+      }, 1000);
+
+      // setTimeout(() => {
+      //   timerToggle();
+      // }, 1000);
+
+      // alert(currentImage.id);
+      // timerToggle();
       // setTimerSeconds(1);
     } else if (isTimerActive) {
       interval = setInterval(() => {
@@ -98,8 +107,11 @@ const Carousel = (props) => {
 
   return (
     <div className="carousel">
+
+    {/* {alert(JSON.stringify(arrImageLength))} */}
+
       <div className="carousel_-_media">
-        <img src={images.tabpik[currentImage]} alt={currentImage} />
+        <img src={images.tabpik[currentImage.image]} alt={currentImage.image} />
         <div className="carousel_-_media_--_control">
           <Control
             count={count}
