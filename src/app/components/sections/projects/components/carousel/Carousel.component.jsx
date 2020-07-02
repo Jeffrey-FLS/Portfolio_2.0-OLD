@@ -34,7 +34,9 @@ const Carousel = (props) => {
   const [isTimerActive, setIsTimerActive] = useState(true);
 
   const timerToggle = () => {
-    setIsTimerActive(!isTimerActive);
+    setIsTimerActive(isTimerActive => !isTimerActive);
+    // alert(`Timer is ${isTimerActive}`)
+    console.log(`Timer is ${isTimerActive}`);
   };
 
   const timerReset = () => {
@@ -58,26 +60,43 @@ const Carousel = (props) => {
     // const imageListLength = props.projectImages.length;
     const imageListLength = arrImageLength;
 
-    if (currentImage.id >= imageListLength) {
+    if (currentImage.id >= (imageListLength - 1)) {
       setCurrentImage(defaultImage);
     } else if (currentImage.id < imageListLength) {
       const newId = currentImage.id + 1;
       setCurrentImage({id: newId, image: props.projectImages[newId]})
     }
+
+    console.log(`Current image is ${JSON.stringify(currentImage)}`)
   };
+
+  const delayRotation = () => {
+    setTimeout(() => {
+      timerToggle();
+      // setIsTimerActive(!isTimerActive);
+      // alert(`Timer is ${isTimerActive}`)
+      // alert("hEllo");
+    }, 5000);
+  }
 
   useEffect(() => {
     let interval = null;
+    let timeout = null;
 
-    if (timerSeconds >= timerLimit) {
+    console.log("hellow worldl");
+    // let timer = null;
+
+    if (timerSeconds > timerLimit) {
       timerToggle();
       timerReset();
       rotateImage();
+      delayRotation();
 
 
-      interval = setInterval(() => {
-        setTimerSeconds(() => timerToggle());
-      }, 1000);
+      // timeout = setTimeout(() => {
+      //   timerToggle();
+      //   alert("hEllo");
+      // }, 5000);
 
       // setTimeout(() => {
       //   timerToggle();
