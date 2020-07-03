@@ -9,6 +9,8 @@ import images from "assets/images";
 import { Control, Timer } from "./components";
 // import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
 
+// Git Commit
+
 /**
  * @param {{ projects: { images: any[]; }; }} props
  */
