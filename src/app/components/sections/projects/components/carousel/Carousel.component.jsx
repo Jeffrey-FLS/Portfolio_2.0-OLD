@@ -7,6 +7,7 @@ import "./Carousel.component.scss";
 // import images from "assets/images";
 import images from "assets/images";
 import { Control, Timer } from "./components";
+import { CSSTransition } from "react-transition-group";
 // import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
 
 /**
@@ -130,7 +131,15 @@ const Carousel = (props) => {
     {/* {alert(JSON.stringify(arrImageLength))} */}
 
       <div className="carousel_-_media">
+      <CSSTransition
+          in={true}
+          appear={true}
+          timeout={1000}
+          classNames="fade"
+        >
         <img src={images.tabpik[currentImage.image]} alt={currentImage.image} />
+        </CSSTransition>
+        
         <div className="carousel_-_media_--_control">
           <Control
             count={count}
