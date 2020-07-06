@@ -131,7 +131,7 @@ const Carousel = (props) => {
     {/* {alert(JSON.stringify(arrImageLength))} */}
 
       <div className="carousel_-_media">
-      <CSSTransition
+        <CSSTransition
           in={true}
           appear={true}
           timeout={1000}
