@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 // Assets
 import "./Carousel.component.scss";
 
+// Committing
+
 // import images from "assets/images";
 import images from "assets/images";
 import { Control, Timer } from "./components";
