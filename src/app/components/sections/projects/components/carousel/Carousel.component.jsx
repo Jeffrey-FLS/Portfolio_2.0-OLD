@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 // Assets
 import "./Carousel.component.scss";
 
-// Committin to push
+// Committin
 
 // import images from "assets/images";
 import images from "assets/images";
