@@ -73,9 +73,23 @@
   //left: 50%;
   //transform: translate(-50% -50%);
   //z-index: 10;
+//   &::after {
+//     background-color: red;
+//     content: ' ';
+//     position: absolute;
+//     width: 100%;
+//     z-index: 100;
+//  } 
+
 }
 
-.carousel_-_media img {
+.carousel_-_media_--_container {
+  position: relative;
+  max-width: 226px;
+  margin: 0 auto;
+}
+
+.carousel_-_media_--_img                                                                                                                                                                                                                          {
   height: 100%;
   // opacity: 0;
   //width: 100%;
@@ -206,6 +220,12 @@ opacity: 0;
 
 // Media Sizes -----------------------------------------------------------------
 
+// Mixins -------------------------------------------------------------
+// @mixin pseudo($display: block, $pos: absolute, $content: '') {
+//   content: $content;
+//   display: $display;
+//   position: $pos;
+// }
 
 /*******************************************************************************
 * XS |
