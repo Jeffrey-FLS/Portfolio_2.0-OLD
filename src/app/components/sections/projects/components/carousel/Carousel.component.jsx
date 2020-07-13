@@ -133,19 +133,19 @@ const Carousel = (props) => {
       {/* {alert(JSON.stringify(arrImageLength))} */}
 
       <div className="carousel_-_media">
-        <TransitionGroup className="carousel_-_media_--_container">
+        {/* <TransitionGroup className="carousel_-_media_--_container">
           <CSSTransition
             in={true}
             appear={true}
             timeout={1000}
             classNames="fade"
-          >
+          > */}
             <img
               src={images.tabpik[currentImage.image]}
               alt={currentImage.image}
             />
-          </CSSTransition>
-        </TransitionGroup>
+          {/* </CSSTransition>
+        </TransitionGroup> */}
         <div className="carousel_-_media_--_control">
           <Control count={count} amount={amount} timerState={isTimerActive} />
         </div>
