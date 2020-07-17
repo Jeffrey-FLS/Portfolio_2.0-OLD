@@ -8,7 +8,7 @@ import "./Carousel.component.scss";
 
 // import images from "assets/images";
 import images from "assets/images";
-import { Control, Timer } from "./components";
+import { Control, Timer, ImageCarousel } from "./components";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 // import { CSSTransition } from "react-transition-group";
@@ -132,20 +132,28 @@ const Carousel = (props) => {
     <div className="carousel">
       {/* {alert(JSON.stringify(arrImageLength))} */}
 
+      
+
       <div className="carousel_-_media">
-        {/* <TransitionGroup className="carousel_-_media_--_container">
+        {/* <TransitionGroup className="carousel_-_media_--_container"> */}
           <CSSTransition
             in={true}
             appear={true}
             timeout={1000}
             classNames="fade"
-          > */}
-            <img
+          >
+
+          <ImageCarousel image={currentImage.image} />
+
+          {/* <div className="carousel_-_media_--_image"> */}
+            {/* <img
               src={images.tabpik[currentImage.image]}
               alt={currentImage.image}
-            />
-          {/* </CSSTransition>
-        </TransitionGroup> */}
+            /> */}
+          {/* </div> */}
+            
+          </CSSTransition>
+        {/* </TransitionGroup> */}
         <div className="carousel_-_media_--_control">
           <Control count={count} amount={amount} timerState={isTimerActive} />
         </div>

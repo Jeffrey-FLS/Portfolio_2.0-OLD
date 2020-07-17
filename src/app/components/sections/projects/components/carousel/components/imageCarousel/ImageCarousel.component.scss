@@ -28,7 +28,7 @@
 */
 
 // Imports ---------------------------------------------------------------------
-@import './../../../styles/_palette.scss';
+// @import './../../../styles/_palette.scss';
 
 
 /*******************************************************************************
@@ -39,6 +39,10 @@
 //  background-color: $palette-shady-white;
 //}
 
+.image-carousel {
+    background-color: red;
+
+}
 
 
 
