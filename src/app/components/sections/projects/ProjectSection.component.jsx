@@ -86,7 +86,7 @@ const ProjectSection = () => {
 
                 <div className="project-right-col col-8">
                          <div className="project_-_carousel">
-                             <Carousel projects={project}/>
+                             <Carousel projectImages={project.images}/>
                          </div>
                 </div>
             </div>

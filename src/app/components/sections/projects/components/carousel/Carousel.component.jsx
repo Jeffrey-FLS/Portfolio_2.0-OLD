@@ -4,9 +4,14 @@ import React, { useState, useEffect } from "react";
 // Assets
 import "./Carousel.component.scss";
 
+// Pushing to Git
+
 // import images from "assets/images";
 import images from "assets/images";
-import { Control, Timer } from "./components";
+import { Control, Timer, ImageCarousel } from "./components";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+// import { CSSTransition } from "react-transition-group";
 // import ProgressBar from "../progress/components/progress_bar/ProgressBar.component";
 
 /**
@@ -16,12 +21,18 @@ const Carousel = (props) => {
   // const image = props.projects.images[0];
   // const images = props.projects.images;
 
-  const arrImageLength = props.projects.images.length;
+  const arrImageLength = props.projectImages.length;
+
+  const defaultImage = { id: 0, image: props.projectImages[0] };
 
   const [count, setCount] = useState(1);
   const [amount, setAmount] = useState(arrImageLength);
 
+<<<<<<< HEAD
   const [currentImage, setCurrentImage] = useState(props.projects.images[0]);
+=======
+  const [currentImage, setCurrentImage] = useState(defaultImage);
+>>>>>>> foundation_v0.7.1--project_section
 
   /* TIMER TEST *************************************************************/
 
@@ -32,7 +43,9 @@ const Carousel = (props) => {
   const [isTimerActive, setIsTimerActive] = useState(true);
 
   const timerToggle = () => {
-    setIsTimerActive(!isTimerActive);
+    setIsTimerActive((isTimerActive) => !isTimerActive);
+    // alert(`Timer is ${isTimerActive}`)
+    console.log(`Timer is ${isTimerActive}`);
   };
 
   const timerReset = () => {
@@ -53,28 +66,52 @@ const Carousel = (props) => {
   // };
 
   const rotateImage = () => {
-    const imageListLength = props.projects.images.length;
+    // const imageListLength = props.projectImages.length;
+    const imageListLength = arrImageLength;
 
-    if (currentImage === props.projects.images[imageListLength]) {
-      setCurrentImage(props.projects.images[0]);
-    } else {
-      setCurrentImage(props.projects.images[0]);
+    if (currentImage.id >= imageListLength - 1) {
+      setCurrentImage(defaultImage);
+    } else if (currentImage.id < imageListLength) {
+      const newId = currentImage.id + 1;
+      setCurrentImage({ id: newId, image: props.projectImages[newId] });
     }
 
-    while (true) {
-      for (let i = 0; i < arrImageLength; i++) {
-        setInterval(() => {
-          setCurrentImage(props.projects.images[i]);
-        }, 1000);
-      }
-    }
+    console.log(`Current image is ${JSON.stringify(currentImage)}`);
+  };
+
+  const delayRotation = () => {
+    setTimeout(() => {
+      timerToggle();
+      // setIsTimerActive(!isTimerActive);
+      // alert(`Timer is ${isTimerActive}`)
+      // alert("hEllo");
+    }, 5000);
   };
 
   useEffect(() => {
     let interval = null;
+    let timeout = null;
 
-    if (timerSeconds >= timerLimit) {
+    console.log("hello world");
+    // let timer = null;
+
+    if (timerSeconds > timerLimit) {
       timerToggle();
+      timerReset();
+      rotateImage();
+      delayRotation();
+
+      // timeout = setTimeout(() => {
+      //   timerToggle();
+      //   alert("hEllo");
+      // }, 5000);
+
+      // setTimeout(() => {
+      //   timerToggle();
+      // }, 1000);
+
+      // alert(currentImage.id);
+      // timerToggle();
       // setTimerSeconds(1);
     } else if (isTimerActive) {
       interval = setInterval(() => {
@@ -97,14 +134,32 @@ const Carousel = (props) => {
 
   return (
     <div className="carousel">
+      {/* {alert(JSON.stringify(arrImageLength))} */}
+
+      
+
       <div className="carousel_-_media">
-        <img src={images.tabpik[currentImage]} alt={currentImage} />
+        {/* <TransitionGroup className="carousel_-_media_--_container"> */}
+          <CSSTransition
+            in={true}
+            appear={true}
+            timeout={1000}
+            classNames="fade"
+          >
+
+          <ImageCarousel image={currentImage.image} />
+
+          {/* <div className="carousel_-_media_--_image"> */}
+            {/* <img
+              src={images.tabpik[currentImage.image]}
+              alt={currentImage.image}
+            /> */}
+          {/* </div> */}
+            
+          </CSSTransition>
+        {/* </TransitionGroup> */}
         <div className="carousel_-_media_--_control">
-          <Control
-            count={count}
-            amount={amount}
-            timerState={isTimerActive}
-          />
+          <Control count={count} amount={amount} timerState={isTimerActive} />
         </div>
         <div className="carousel_-_media_--_nav" />
       </div>

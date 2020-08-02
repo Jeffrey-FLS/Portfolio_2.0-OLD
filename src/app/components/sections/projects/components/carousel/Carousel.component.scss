@@ -41,7 +41,7 @@
   position: relative;
   // @include background-layer();
 
-  // background-color: blue;
+  background-color: blue;
   min-height: 300px;
   height: 400px;
   width: 100%;
@@ -73,9 +73,23 @@
   //left: 50%;
   //transform: translate(-50% -50%);
   //z-index: 10;
+//   &::after {
+//     background-color: red;
+//     content: ' ';
+//     position: absolute;
+//     width: 100%;
+//     z-index: 100;
+//  } 
+
 }
 
-.carousel_-_media img {
+.carousel_-_media_--_container {
+  position: relative;
+  max-width: 226px;
+  margin: 0 auto;
+}
+
+.carousel_-_media img {                                                                                                                                                                                                                         
   height: 100%;
   // opacity: 0;
   //width: 100%;
@@ -87,6 +101,19 @@
   //background-color: red;
   z-index: 10;
 }
+
+// .carousel_-_media img {                                                                                                                                                                                                                         
+//   height: 100%;
+//   // opacity: 0;
+//   //width: 100%;
+//   position: relative;
+//   object-fit: cover;
+//   border-radius: inherit;
+//   //display: block;
+//   //display: inline-block;
+//   //background-color: red;
+//   z-index: 10;
+// }
 
 .carousel_-_media_--_control {
   $outpost: -60px;
@@ -139,6 +166,65 @@
 
 // Animation ----------------------------------------------------------------------
 
+/* appear - on page load */
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-appear.fade-appear-active {
+opacity: 1;
+transition: opacity 1000ms linear;
+}
+
+/* enter */
+.fade-enter {
+opacity: 0;
+z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms linear 5000ms;
+}
+
+/* exit */
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 5000ms linear;
+}
+.fade-exit-done {
+opacity: 0;
+}
+
+/* slide enter */
+.slide-enter {
+opacity: 0;
+transform: scale(0.97) translateY(5px);
+z-index: 1;
+}
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: opacity 3000ms linear 1000ms, transform 3000ms ease-in-out 1000ms;
+}
+
+/* slide exit */
+.slide-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  
+}
+.slide-exit.slide-exit-active {
+  opacity: 0;
+  transform: scale(0.97) translateY(5px);
+  transition: opacity 1500ms linear, transform 1500ms ease-out;
+}
+.slide-exit-done {
+opacity: 0;
+}
+
 // Active ----------------------------------------------------------------------
 
 // Hover -----------------------------------------------------------------------
@@ -147,6 +233,12 @@
 
 // Media Sizes -----------------------------------------------------------------
 
+// Mixins -------------------------------------------------------------
+// @mixin pseudo($display: block, $pos: absolute, $content: '') {
+//   content: $content;
+//   display: $display;
+//   position: $pos;
+// }
 
 /*******************************************************************************
 * XS |
