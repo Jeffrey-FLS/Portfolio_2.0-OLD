@@ -28,11 +28,9 @@ const Carousel = (props) => {
   const [count, setCount] = useState(1);
   const [amount, setAmount] = useState(arrImageLength);
 
-<<<<<<< HEAD
-  const [currentImage, setCurrentImage] = useState(props.projects.images[0]);
-=======
+
+  // const [currentImage, setCurrentImage] = useState(props.projects.images[0]);
   const [currentImage, setCurrentImage] = useState(defaultImage);
->>>>>>> foundation_v0.7.1--project_section
 
   /* TIMER TEST *************************************************************/
 
